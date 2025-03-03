@@ -1,6 +1,5 @@
 # Portfolio
 
-This repository has the source code teached through [YouTube tutorials](https://www.youtube.com/watch?v=nnL2PRIpOEs&list=PL8YNlUoOZkkZfjIZTIID5klC---7k_2T2&pp=gAQBiAQB). 
 The Portfolio has the goal of showing a summary of the developer and its projects.
 
 ## Configuring

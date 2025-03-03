@@ -8,7 +8,7 @@ Follow these instructions to clone the repository and start running the project 
 
 1. Open the terminal and navigate to the directory where you want to clone the repository, then run the following command:
     ```bash
-    git clone https://github.com/huri3l/portfolio
+    git clone https://github.com/abreuclariana/landing-page.git
     ```
    
 2. Enter the project directory:
@@ -31,4 +31,4 @@ Follow these instructions to clone the repository and start running the project 
 - TypeScript
 
 
-**Portfolio** - Developed by Huriel Lopes - https://huriel.com.br/en-us
+

@@ -4,6 +4,8 @@ import { Project, AboutMe as TAboutMe } from '@/types/Home';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
+import homeData from '../../public/home.json';
+
 interface HomeProps {
   home: {
     aboutMe: TAboutMe;
@@ -12,15 +14,15 @@ interface HomeProps {
 }
 
 const Home = ({ home }: HomeProps) => {
-  const { projects, aboutMe } = home;
+  const { projects, aboutMe } = home || { projects: [], aboutMe: {} as TAboutMe };
 
   return (
     <>
       <Head>
-        <title>About me | Clariana</title>
+        <title>About me | Guilherme Cirelli Lopes</title>
         <meta
           name="description"
-          content="I'm a front-end developer with a passion for creating interfaces and helping other devs!"
+          content="Portfólio de Guilherme Cirelli Lopes — Desenvolvedor web apaixonado por criar interfaces e soluções eficientes."
         />
       </Head>
       <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
@@ -32,17 +34,11 @@ const Home = ({ home }: HomeProps) => {
 };
 
 const loadHome = async () => {
-  const res = await fetch(
-    'https://gist.githubusercontent.com/huri3l/b2d6a36f169dfe3fcd11a5dac89d83cc/raw/ad2cd1cd3c858ffd6fd70af5c80bb6bf98ee2cdf/home.json',
-  );
-  const home = await res.json();
-
-  return home;
+  return homeData;
 };
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const home = await loadHome();
-
   return {
     props: { home },
   };

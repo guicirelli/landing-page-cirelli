@@ -15,7 +15,7 @@ const Contatos = ({ contacts }: ContatosProps) => {
   return (
     <>
       <Head>
-        <title>Contacts | Clariana</title>
+        <title>Contacts | Guilherme</title>
       </Head>
       <div className="mt-12 md:mt-24 space-y-8 md:space-y-16 px-6 md:px-32">
         <h1 className="text-5xl md:text-7xl font-bold text-center">Contacts</h1>

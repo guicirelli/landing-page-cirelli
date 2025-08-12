@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Roboto } from 'next/font/google';
 import { AboutMe as TAboutMe } from '@/types/Home';
 
-const linkedinImage = "/img/linkedin-4.jpg";
+const linkedinImage = "/img/perfil.jpeg";
 
 
 const roboto = Roboto({
@@ -23,17 +23,22 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
       <div className="text-white flex flex-col items-center xl:items-start gap-4 w-full xl:w-120">
         <h1 className="text-3xl sm:text-7xl xl:leading-[5rem]">
         Pleasure, I am &nbsp;
-          <strong className="font-bold"><h1>Clariana</h1></strong>
+          <strong className="font-bold"><h1>Guilherme</h1></strong>
         </h1>
         <div className="mb-12">
-          <h2 className={`${roboto.className} mb-12`}>I am a front-end developer with a passion for creating interfaces and helping other devs!</h2>
-          <Link
-            href={contact.link} 
-            className="p-3 bg-h-gray-500 w-fit text-xl rounded-lg transition-all hover:bg-opacity-80"
-          >
-            {contact.label}
-          </Link>
-        </div>
+  <h2 className={`${roboto.className} mb-12`}>
+    Web developer passionate about delivering efficient and practical solutions.
+  </h2>
+ <Link
+  href={contact.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-3 bg-h-gray-500 w-fit text-xl rounded-lg transition-all hover:bg-opacity-80"
+>
+  {contact.label}
+</Link>
+</div>
+
         <ul className="flex flex-wrap justify-center xl:grid xl:grid-cols-2 xl:w-fit gap-3 text-xl">
           {techs.map(({ tech, bgcolor, color }, index) => (
             <li
@@ -56,11 +61,10 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
           className="rounded-full"
         />
         <p className="p-4 w-fit text-base leading-tight bg-h-blue-500 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
-          <strong className="text-3xl">2+
-          years of experience</strong>
+          <strong className="text-3xl">Undergraduate in Systems Analysis and Development</strong>
           <br />
         
-          years of experience
+           Systems Analysis and Development
         </p>
       </div>
     </main>

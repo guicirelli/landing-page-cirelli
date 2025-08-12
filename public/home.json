@@ -1,0 +1,27 @@
+{
+  "aboutMe": {
+    "title": "Sobre mim",
+    "description": "Sou desenvolvedor web apaixonado por tecnologia...",
+    "contact": {
+      "link": "https://www.linkedin.com/in/guicirelli/",
+      "label": "Perfil Linkedin"
+    },
+    "techs": [
+  { "tech": "JavaScript", "bgcolor": "#f7df1e", "color": "#000000" },
+  { "tech": "Node.js", "bgcolor": "#3c873a", "color": "#ffffff" },
+  { "tech": "Next.js", "bgcolor": "#008080", "color": "#ffffff" },
+  { "tech": "Express", "bgcolor": "#d2691e", "color": "#ffffff" },
+  { "tech": "HTML", "bgcolor": "#e34f26", "color": "#ffffff" },
+  { "tech": "CSS", "bgcolor": "#1572b6", "color": "#ffffff" },
+   { "tech": "SQL", "bgcolor": "#f29111", "color": "#000000" },
+  { "tech": "GitHub", "bgcolor": "#181717", "color": "#ffffff" }
+],
+    "pfp": {
+      "image": {
+        "src": "/img/perfil.jpeg",
+        "alt": "Foto de Guilherme Cirelli Lopes"
+      }
+    }
+  },
+  "projects": []
+}

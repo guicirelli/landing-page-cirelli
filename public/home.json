@@ -1,6 +1,9 @@
 {
   "aboutMe": {
-    "title": "Sobre mim",
+    "title": {
+  "default": "Pleasure, I am",
+  "bold": "Guilherme"
+},
     "description": "Sou desenvolvedor web apaixonado por tecnologia...",
     "contact": {
       "link": "https://www.linkedin.com/in/guicirelli/",

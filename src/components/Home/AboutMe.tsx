@@ -21,10 +21,9 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
   return (
     <main className="flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32 py-8 text-lg text-center xl:text-left xl:flex-nowrap xl:justify-between">
       <div className="text-white flex flex-col items-center xl:items-start gap-4 w-full xl:w-120">
-        <h1 className="text-3xl sm:text-7xl xl:leading-[5rem]">
-        Pleasure, I am &nbsp;
-          <strong className="font-bold"><h1>Guilherme</h1></strong>
-        </h1>
+        <h1 className="text-3xl sm:text-7xl xl:leading-[5rem] text-white">
+  {title.default} <strong>{title.bold}</strong>
+</h1>
         <div className="mb-12">
   <h2 className={`${roboto.className} mb-12`}>
     Web developer passionate about delivering efficient and practical solutions.

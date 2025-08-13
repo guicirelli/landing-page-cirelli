@@ -17,23 +17,22 @@ const Contatos = ({ contacts }: ContatosProps) => {
       <Head>
         <title>Contacts | Guilherme</title>
       </Head>
-      <div className="mt-12 md:mt-24 space-y-8 md:space-y-16 px-6 md:px-32">
-        <h1 className="text-5xl md:text-7xl font-bold text-center">Contacts</h1>
-        <ul className="table mx-auto space-y-6 md:space-y-8">
+      <div className=" px-6 md:px-32 bg-h-blue-900 rounded-lg shadow-lg py-10">
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-10">Contacts</h1>
+        <ul className="flex flex-col items-center mx-auto max-w-md space-y-4">
           {contacts.map(({ link, name, isMail }, idx) => (
-            <li key={name + idx}>
-              <span className="font-bold">{name}</span>
-              <div className="flex gap-1 md:gap-3 items-center">
-                <a
-                  href={isMail ? `mailto:${link}` : link}
-                  target="_blank"
-                  className="text-sm md:text-lg text-slate-300 underline truncate"
-                >
-                  {link}
-                </a>
-                {isMail && <CopyButton textToCopy={link} />}
-              </div>
-            </li>
+            <li key={name + idx} className="flex items-center gap-3 text-lg md:text-xl">
+  <span>{isMail ? "📧" : "🔗"}</span>
+  <a
+    href={isMail ? `mailto:${link}` : link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white hover:text-h-blue-400 transition-colors font-semibold underline"
+  >
+    {name}
+  </a>
+  {isMail && <CopyButton textToCopy={link} />}
+</li>
           ))}
         </ul>
       </div>
@@ -42,12 +41,26 @@ const Contatos = ({ contacts }: ContatosProps) => {
 };
 
 const loadContacts = async () => {
-  const res = await fetch(
-    'https://gist.githubusercontent.com/huri3l/2b64cb37a94a46c7b97c4c4a51ff5439/raw/fa574847dd9a99a740e31b84e06d770def1364ab/contact.json',
-  );
-  const data = res.json();
-
-  return data;
+  return [
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/guicirelli/",
+    },
+    {
+      name: "GitHub",
+      link: "https://github.com/guicirelli",
+    },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/guicirelli/",
+    },
+    {
+      name: "Email",
+      link: "guilopes.030206@gmail.com",
+      isMail: true,
+    },
+    
+  ];
 };
 
 export const getServerSideProps = async () => {

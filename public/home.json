@@ -20,11 +20,15 @@
   { "tech": "GitHub", "bgcolor": "#181717", "color": "#ffffff" }
 ],
     "pfp": {
-      "image": {
-        "src": "/img/perfil.jpeg",
-        "alt": "Foto de Guilherme Cirelli Lopes"
-      }
-    }
+  "image": {
+    "src": "/img/perfil.jpeg",
+    "alt": "Foto de Guilherme Cirelli Lopes"
+  },
+  "experience": {
+    "default": "Undergraduate in",
+    "bold": "Systems Analysis and Development"
+  }
+}
   },
   "projects": []
 }

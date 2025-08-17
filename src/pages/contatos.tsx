@@ -27,7 +27,7 @@ const Contatos = ({ contacts }: ContatosProps) => {
     e.preventDefault();
     
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch(process.env.NEXT_PUBLIC_NETLIFY_FUNCTION_URL || '/.netlify/functions/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

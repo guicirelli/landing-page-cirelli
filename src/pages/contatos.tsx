@@ -145,7 +145,7 @@ const loadContacts = async () => {
   ];
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const contacts = await loadContacts();
 
   return {

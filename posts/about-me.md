@@ -1,11 +1,11 @@
 ---
 title: "About Me"
 date: "2024-01-15"
-author: "Clariana"
+author: "Guilherme"
 public: true
 ---
 
-# About Me
+
 
 ![Profile Photo 1](/img/perfil2.jpeg)
 

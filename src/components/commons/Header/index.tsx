@@ -36,14 +36,14 @@ export const Header = () => {
 
   return (
     <header
-      className={`${roboto.className} bg-h-blue-900 text-sm flex py-2 px-5 justify-between items-center sticky top-0 z-20`}
+      className={`${roboto.className} bg-h-blue-900 text-sm flex py-1 px-5 justify-between items-center sticky top-0 z-20`}
     >
       <button className="p-1 md:hidden" onClick={openMenu}>
         <MenuIcon className="fill-white w-10 h-10" />
       </button>
       <nav className="hidden md:flex items-center gap-4 text-md">
         <Link href="/" className={`px-4 py-2 rounded-md ${router.pathname === '/' ? 'bg-h-blue-500' : 'bg-h-blue-700'} hover:bg-h-blue-600 transition-colors duration-200`}>Home</Link>
-        <Link href="/contatos" className={`px-4 py-2 rounded-md ${router.pathname === '/contatos' ? 'bg-h-blue-500' : 'bg-h-blue-700'} hover:bg-h-blue-600 transition-colors duration-200`}>Contact me</Link>
+        <Link href="/contatos" className={`px-4 py-2 rounded-md ${router.pathname === '/contatos' ? 'bg-h-blue-500' : 'bg-h-blue-700'} hover:bg-h-blue-600 transition-colors duration-200`}>Contact</Link>
       </nav>
       <div className="flex items-center gap-4">
         {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && (

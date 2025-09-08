@@ -1,11 +1,17 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getAllPostSlugs, getPostData, PostData } from '@/lib/posts';
-import { SignedIn, SignedOut } from "@clerk/nextjs";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ClientOnly } from '@/components/commons/ClientOnly'; // Importar ClientOnly
 import { CustomSignInButton } from "@/components/commons/clerk/SignInButton"; // Importar CustomSignInButton
+import dynamic from 'next/dynamic'; // Importar dynamic
+
+// Importar SignedIn e SignedOut dinamicamente para garantir que sejam renderizados apenas no cliente
+// @ts-expect-error
+const SignedIn = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedIn), { ssr: false });
+// @ts-expect-error
+const SignedOut = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedOut), { ssr: false });
 
 interface PostProps {
   postData: PostData;

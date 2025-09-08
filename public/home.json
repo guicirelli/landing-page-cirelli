@@ -4,10 +4,10 @@
   "default": "Pleasure, I am",
   "bold": "Guilherme"
 },
-    "description": "Sou desenvolvedor web apaixonado por tecnologia...",
+    "description": "I'm a web developer passionate about technology...",
     "contact": {
       "link": "https://www.linkedin.com/in/guicirelli/",
-      "label": "Perfil Linkedin"
+      "label": "LinkedIn Profile"
     },
     "techs": [
   { "tech": "JavaScript", "bgcolor": "#f7df1e", "color": "#000000" },

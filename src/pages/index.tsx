@@ -1,4 +1,4 @@
-import { AboutMe } from '@/components/Home/AboutMe';
+import { Inicio } from '@/components/Home/Inicio';
 import { Project, AboutMe as TAboutMe } from '@/types/Home';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
@@ -12,7 +12,13 @@ interface HomeProps {
   home: {
     aboutMe: TAboutMe;
   };
-  allPostsData: PostData[]; // Adicionar posts ao HomeProps
+  allPostsData: Array<{
+    slug: string;
+    title: string;
+    date: string;
+    author: string;
+    public: boolean;
+  }>;
 }
 
 const Home = ({ home, allPostsData }: HomeProps) => {
@@ -22,14 +28,14 @@ const Home = ({ home, allPostsData }: HomeProps) => {
   return (
     <>
       <Head>
-        <title>Portfólio | Guilherme Cirelli Lopes</title>
+        <title>Portfolio | Guilherme Cirelli Lopes</title>
         <meta
           name="description"
-          content="Portfólio de Guilherme Cirelli Lopes — Desenvolvedor web apaixonado por criar interfaces e soluções eficientes."
+          content="Portfolio of Guilherme Cirelli Lopes — Web developer passionate about creating efficient interfaces and solutions."
         />
       </Head>
-      <div className="py-6 px-6 md:px-32 space-y-10 md:space-y-28">
-        <AboutMe aboutMe={aboutMe} />
+      <div className="pt-0 pb-2 px-6 md:px-32 space-y-6 md:space-y-12">
+        <Inicio aboutMe={aboutMe} />
 
         {/* Seção de Posts */}
         <section className="bg-gray-800 rounded-lg shadow-lg py-12 px-6 md:px-20 my-16 max-w-6xl mx-auto text-white">
@@ -55,7 +61,7 @@ const Home = ({ home, allPostsData }: HomeProps) => {
       </div>
 
       <footer className="mt-16 py-6 text-center text-white bg-h-blue-800">
-        © 2025 All Rights Reserved
+        © 2025 Guilherme Cirelli Lopes. All Rights Reserved
       </footer>
     </>
   );

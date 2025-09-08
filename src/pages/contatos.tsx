@@ -142,11 +142,6 @@ const loadContacts = async () => {
       name: "GitHub",
       link: "https://github.com/guicirelli",
     },
-    {
-      name: "Instagram",
-      link: "https://www.instagram.com/guicirelli/",
-    },
-    
   ];
 };
 

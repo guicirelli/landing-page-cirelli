@@ -14,7 +14,7 @@ interface AboutMeProps {
   aboutMe: TAboutMe;
 }
 
-export const AboutMe = ({ aboutMe }: AboutMeProps) => {
+export const Inicio = ({ aboutMe }: AboutMeProps) => {
   const { title, description, contact, pfp, techs } = aboutMe;
 
   return (

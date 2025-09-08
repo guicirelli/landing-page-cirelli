@@ -1,5 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import { getAllPostSlugs, getPostData, PostData } from '@/lib/posts';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -25,7 +27,12 @@ const Post = ({ postData }: PostProps) => {
   const ImageRenderer = ({ node, ...props }: any) => {
     return (
       <div className="flex justify-center items-center mb-4">
-        <img {...props} className="w-full h-auto max-w-[10rem] md:max-w-[12rem] lg:max-w-[14rem] rounded-lg shadow-lg" />
+        <Image 
+          {...props} 
+          width={300}
+          height={300}
+          className="w-full h-auto max-w-[10rem] md:max-w-[12rem] lg:max-w-[14rem] rounded-lg shadow-lg" 
+        />
       </div>
     );
   };
@@ -123,7 +130,7 @@ const Post = ({ postData }: PostProps) => {
           </>
         )}
 
-        <p className="mt-8 text-center"><a href="/" className="text-blue-500 hover:underline">Voltar para a Home</a></p>
+        <p className="mt-8 text-center"><Link href="/" className="text-blue-500 hover:underline">Voltar para a Home</Link></p>
       </div>
     </>
   );

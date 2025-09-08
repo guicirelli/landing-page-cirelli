@@ -28,7 +28,7 @@ const Home = ({ home, allPostsData }: HomeProps) => {
           content="Portfólio de Guilherme Cirelli Lopes — Desenvolvedor web apaixonado por criar interfaces e soluções eficientes."
         />
       </Head>
-      <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
+      <div className="py-6 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe aboutMe={aboutMe} />
 
         {/* Seção de Posts */}

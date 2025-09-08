@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Roboto } from 'next/font/google';
 import { AboutMe as TAboutMe } from '@/types/Home';
 
-const linkedinImage = "/img/perfil.jpeg";
 
 
 const roboto = Roboto({
@@ -52,15 +51,15 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
       </div>
       <div className="relative">
         <Image
-          src={linkedinImage}
+          src={pfp.image.url}
           alt={pfp.image.alt}
           unoptimized
-          width={500}
-          height={500}
+          width={375}
+          height={375}
           className="rounded-full"
         />
-        <p className="p-4 w-fit text-base leading-tight bg-h-blue-500 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
-          <strong className="text-3xl">Undergraduate in Systems Analysis and Development</strong>
+        <p className="p-3 w-fit text-base leading-tight bg-h-blue-500 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
+          <strong className="text-2xl">Undergraduate in Systems Analysis and Development</strong>
           <br />
         
            Systems Analysis and Development

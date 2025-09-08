@@ -7,27 +7,12 @@ public: true
 
 # About Me
 
-Welcome to my personal blog! I'm Clariana, a passionate developer and creative thinker.
+![Profile Photo 1](/img/perfil2.jpeg)
 
-## My Journey
+![Profile Photo 2](/img/perfil3.jpeg)
 
-I've been working in the tech industry for several years, focusing on web development and user experience design. My journey started with curiosity about how websites work, and it has evolved into a deep passion for creating meaningful digital experiences.
+My name is Guilherme Cirelli Lopes, an undergraduate student in Systems Analysis and Development at Unicesumar, passionate about web development. Known for dedication and integrity, I always strive to fulfill my commitments with excellence.
 
-## Skills & Interests
+Combining study, hands-on practice, and mentorship, I quickly absorb new knowledge and deliver effective solutions. Understanding problems deeply before building solutions is something I highly value, along with clear communication and organized documentation to enhance teamwork.
 
-- **Frontend Development**: React, Next.js, TypeScript
-- **Backend Development**: Node.js, Python
-- **Design**: UI/UX, Figma, Adobe Creative Suite
-- **Other**: Photography, Writing, Travel
-
-## What I'm Working On
-
-Currently, I'm exploring the intersection of technology and creativity, working on projects that combine my technical skills with my artistic interests.
-
-## Get in Touch
-
-Feel free to reach out if you'd like to collaborate or just have a chat about technology, design, or anything else!
-
----
-
-*This is a sample post to demonstrate the blog functionality.*
+Although still in the early stages of my career, I have developed solid skills in Next.js, JavaScript, and related technologies. Discipline, resilience, and continuous learning guide my growth. My goal is to keep evolving, leveraging my passion for software development to overcome challenges and create a positive impact in every project I undertake.

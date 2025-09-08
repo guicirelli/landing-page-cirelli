@@ -6,9 +6,12 @@ import { ClerkProvider } from '@clerk/nextjs';
 export default function App({ Component, pageProps }: AppProps) {
   const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
+  // Se não há chave do Clerk, renderiza sem autenticação
   if (!PUBLISHABLE_KEY) {
-    throw new Error(
-      "Missing Publishable Key -- Get it from https://clerk.com/docs/quickstarts/nextjs"
+    return (
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     );
   }
 

@@ -7,7 +7,7 @@ Follow these instructions to clone the repository and start running the project 
 
 1. Open the terminal and navigate to the directory where you want to clone the repository, then run the following command:
     ```bash
-    git clone https://github.com/abreuclariana/landing-page.git
+    git clone https://github.com/guicirelli/landing-page.cirelli
     ```
    
 2. Enter the project directory:

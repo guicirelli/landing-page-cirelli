@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 import { PageSection } from '@/components/commons/PageSection';
 
@@ -80,9 +81,11 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                   }`}
                 >
                   <div className="relative">
-                    <img
+                    <Image
                       src={projeto.image}
                       alt={projeto.title}
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover"
                     />
                     {projeto.featured && (
@@ -139,8 +142,6 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
           subtitle="Let's create something amazing together!"
           ctaBtnText="Get in Touch"
           ctaBtnLink="/contato"
-          ctaContrastBtnText="View GitHub"
-          ctaContrastBtnLink="https://github.com/guicirelli"
         >
           <div className="col-span-full text-center">
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">

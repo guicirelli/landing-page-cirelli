@@ -1,5 +1,6 @@
 import { getBusinessSettings, getGeneralSettings, getLinkTreeData } from '@/lib/settings';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FooterProps {
   className?: string;
@@ -39,9 +40,11 @@ export const Footer = ({ className = "" }: FooterProps) => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img
+              <Image
                 src="/img/foto perfil.jpeg"
                 alt={businessSettings.brandName}
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-full object-cover"
               />
               <span className="font-bold text-gray-900 dark:text-white text-lg">
@@ -54,7 +57,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
             
             {/* Social Links */}
             <div className="flex gap-4">
-              {linkTreeData.linkTree?.map((link: any, index: number) => {
+              {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
                 const IconComponent = getIcon(link.icon);
                 return (
                   <a
@@ -104,12 +107,22 @@ export const Footer = ({ className = "" }: FooterProps) => {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Contact</h3>
             <div className="space-y-2">
               <p className="text-gray-600 dark:text-gray-300">
-                <a href={`mailto:${businessSettings.brandEmail}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                  {businessSettings.brandEmail}
+                <a 
+                  href="https://wa.me/5543991575781" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                >
+                  {businessSettings.brandPhone}
                 </a>
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                {businessSettings.brandPhone}
+                <a 
+                  href="mailto:guilopes.030206@gmail.com" 
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                >
+                  guilopes.030206@gmail.com
+                </a>
               </p>
             </div>
           </div>

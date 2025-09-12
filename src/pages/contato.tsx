@@ -121,16 +121,29 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                   <div className="flex gap-4">
                     {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
                       const IconComponent = getIcon(link.icon);
+                      const isGithub = link.icon === 'FaGithub';
                       return (
                         <a
                           key={index}
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+                          className={`group relative p-4 w-fit text-xl font-semibold text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl border-2 ${
+                            isGithub 
+                              ? 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 hover:shadow-purple-500/25 border-purple-500 hover:border-purple-400' 
+                              : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 border-blue-500 hover:border-blue-400'
+                          }`}
                           aria-label={link.label}
                         >
-                          <IconComponent />
+                          <span className="flex items-center gap-2">
+                            <IconComponent />
+                            {link.label}
+                          </span>
+                          <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
+                            isGithub 
+                              ? 'bg-gradient-to-r from-purple-400 to-purple-500' 
+                              : 'bg-gradient-to-r from-blue-400 to-blue-500'
+                          }`}></div>
                         </a>
                       );
                     })}

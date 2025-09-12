@@ -44,9 +44,11 @@ export const Header = () => {
     >
       {/* Logo */}
       <div className="flex items-center gap-3">
-        <img
+        <Image
           src={logos.mainLogo}
           alt="Guilherme Cirelli Lopes"
+          width={40}
+          height={40}
           className="w-10 h-10 rounded-full object-cover"
         />
         <span className="font-bold text-gray-900 dark:text-white text-lg">

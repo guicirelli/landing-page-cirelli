@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 import { PageSection } from '@/components/commons/PageSection';
 
@@ -25,137 +26,107 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
       <div className="min-h-screen">
         <PageSection
           title="About Me"
-          subtitle="Learn about my journey as a developer and my passion for technology"
+          subtitle=""
           vPadding="py-20"
         >
           <div className="col-span-full">
             <div className="prose prose-lg max-w-none mx-auto">
-              <div className="flex flex-col lg:flex-row gap-12 items-center">
-                <div className="flex-shrink-0">
-                  <img
+              {/* Education and Specialization blocks */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-3">
+                    Education
+                  </h3>
+                  <p className="text-blue-800 dark:text-blue-200">
+                    Undergraduate in Systems Analysis and Development
+                  </p>
+                </div>
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-green-900 dark:text-green-100 mb-3">
+                    Specialization
+                  </h3>
+                  <p className="text-green-800 dark:text-green-200">
+                    Full-Stack Web Development
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row gap-12 items-start">
+                <div className="flex-shrink-0 flex flex-col gap-8">
+                  <Image
                     src="/img/perfil2.jpeg"
                     alt="Guilherme Cirelli Lopes"
+                    width={256}
+                    height={256}
+                    className="w-64 h-64 rounded-full object-cover shadow-2xl"
+                  />
+                  <Image
+                    src="/img/perfil3.jpeg"
+                    alt="Guilherme Cirelli Lopes working"
+                    width={256}
+                    height={256}
                     className="w-64 h-64 rounded-full object-cover shadow-2xl"
                   />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                    Hello! I&apos;m {businessSettings.brandName}
-                  </h2>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                    I&apos;m a web developer passionate about creating digital solutions that make a difference. 
-                    I&apos;m currently studying Systems Analysis and Development and always seeking to 
-                    learn new technologies and methodologies.
+                    Hello! I&apos;m Guilherme Cirelli Lopes, a Systems Analysis and Development student 💻, 
+                    known for being hardworking and honorable in keeping my promises. My goal is to help 
+                    entrepreneurs 💡 and professionals like you transform ideas into successful digital 
+                    projects 🌟, with scalable, modern and functional solutions.
                   </p>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                    My passion for programming began when I discovered how to transform ideas into 
-                    functional code. Since then, I&apos;ve been dedicated to developing projects that 
-                    combine functionality, usability, and modern design.
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                    <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-3">
-                        Education
-                      </h3>
-                      <p className="text-blue-800 dark:text-blue-200">
-                        Undergraduate in Systems Analysis and Development
-                      </p>
-                    </div>
-                    <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-green-900 dark:text-green-100 mb-3">
-                        Specialization
-                      </h3>
-                      <p className="text-green-800 dark:text-green-200">
-                        Full-Stack Web Development
-                      </p>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                      💼 What can I do for your project?
+                    </h3>
+                    <ul className="text-lg text-gray-700 dark:text-gray-300 space-y-2 mb-6 list-disc list-inside">
+                      <li>Development of responsive and modern websites that highlight your products or services.</li>
+                      <li>Creation of customized web applications, with integrated Front-End and Back-End.</li>
+                      <li>Optimization and deployment on platforms like Netlify and Vercel, ensuring performance and stability.</li>
+                      <li>Structuring efficient systems using Node.js, SQL, ReactJS and NextJS.</li>
+                      <li>Organized documentation and clear communication, facilitating teamwork and future maintenance.</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                      🚀 Why choose to work with me?
+                    </h3>
+                    <ul className="text-lg text-gray-700 dark:text-gray-300 space-y-2 mb-6 list-disc list-inside">
+                      <li><strong>Total commitment:</strong> I deliver what I promise, studying and applying effective solutions.</li>
+                      <li><strong>Quick and constant learning:</strong> I&apos;m always updated on the latest technologies 🔍, offering modern and efficient solutions.</li>
+                      <li><strong>Results-focused:</strong> Before coding, I analyze and deeply understand the problem, ensuring the solution meets your exact needs 💡.</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                      My technical skills:
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg text-gray-700 dark:text-gray-300">
+                      <div>
+                        <h4 className="font-semibold mb-2">Front-End:</h4>
+                        <p>ReactJS | NextJS | HTML5 | CSS3 | Tailwind CSS | Bootstrap | JavaScript | TypeScript</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Back-End:</h4>
+                        <p>Node.js | SQL | REST APIs | Git | GitHub</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Deploy & Optimization:</h4>
+                        <p>Netlify | Vercel</p>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
         </PageSection>
 
-        <PageSection
-          title="My Skills"
-          subtitle="Technologies and tools I use in my daily work"
-          bgColor="bg-gray-50 dark:bg-gray-800"
-        >
-          <div className="col-span-full">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { name: "JavaScript", level: "Advanced", color: "bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200" },
-                { name: "TypeScript", level: "Advanced", color: "bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200" },
-                { name: "React", level: "Advanced", color: "bg-cyan-100 dark:bg-cyan-900/20 text-cyan-800 dark:text-cyan-200" },
-                { name: "Next.js", level: "Advanced", color: "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200" },
-                { name: "Node.js", level: "Intermediate", color: "bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200" },
-                { name: "Express", level: "Intermediate", color: "bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200" },
-                { name: "Tailwind CSS", level: "Advanced", color: "bg-teal-100 dark:bg-teal-900/20 text-teal-800 dark:text-teal-200" },
-                { name: "CSS3", level: "Advanced", color: "bg-pink-100 dark:bg-pink-900/20 text-pink-800 dark:text-pink-200" },
-                { name: "HTML5", level: "Advanced", color: "bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200" },
-                { name: "Git", level: "Advanced", color: "bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-200" },
-                { name: "GitHub", level: "Advanced", color: "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200" },
-                { name: "MongoDB", level: "Intermediate", color: "bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200" },
-                { name: "PostgreSQL", level: "Intermediate", color: "bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200" },
-                { name: "Prisma", level: "Intermediate", color: "bg-indigo-100 dark:bg-indigo-900/20 text-indigo-800 dark:text-indigo-200" },
-                { name: "JWT", level: "Intermediate", color: "bg-purple-100 dark:bg-purple-900/20 text-purple-800 dark:text-purple-200" },
-                { name: "REST APIs", level: "Advanced", color: "bg-emerald-100 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200" },
-                { name: "GraphQL", level: "Basic", color: "bg-pink-100 dark:bg-pink-900/20 text-pink-800 dark:text-pink-200" },
-                { name: "Docker", level: "Basic", color: "bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200" },
-                { name: "AWS", level: "Basic", color: "bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200" },
-                { name: "Vercel", level: "Intermediate", color: "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200" },
-                { name: "Netlify", level: "Intermediate", color: "bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200" },
-                { name: "Figma", level: "Intermediate", color: "bg-purple-100 dark:bg-purple-900/20 text-purple-800 dark:text-purple-200" },
-                { name: "VS Code", level: "Advanced", color: "bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200" },
-                { name: "ESLint", level: "Intermediate", color: "bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-200" },
-                { name: "Prettier", level: "Intermediate", color: "bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200" },
-              ].map((skill, index) => (
-                <div key={index} className={`p-4 rounded-lg text-center ${skill.color}`}>
-                  <h3 className="font-semibold text-lg mb-2">{skill.name}</h3>
-                  <p className="text-sm opacity-75">{skill.level}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </PageSection>
 
-        <PageSection
-          title="Ready to Work Together?"
-          subtitle="Let's create something amazing"
-          ctaBtnText="View My Projects"
-          ctaBtnLink="/projetos"
-        >
-          <div className="col-span-full">
-            <div className="prose prose-lg max-w-none mx-auto text-center">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-8 rounded-xl border border-blue-200 dark:border-blue-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Let&apos;s Build Something Great
-                </h3>
-                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  I&apos;m always excited to work on new projects and collaborate with amazing people. 
-                  Whether you need a full-stack application, a modern website, or technical consulting, 
-                  I&apos;m here to help bring your ideas to life.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/contato"
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-                  >
-                    Get in Touch
-                  </Link>
-                  <a
-                    href="https://github.com/guicirelli"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-                  >
-                    View GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </PageSection>
       </div>
     </>
   );

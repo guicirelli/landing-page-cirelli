@@ -19,26 +19,34 @@ export const Inicio = ({ aboutMe }: AboutMeProps) => {
           <h2 className="mb-8 text-gray-700 dark:text-gray-300 text-xl">
             Web developer passionate about creating efficient and practical solutions.
           </h2>
-                  <div className="flex flex-col xl:flex-row xl:items-center xl:gap-8">
-                    <Link
-                      href={contact.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative p-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 w-fit text-xl font-semibold text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 mb-4 xl:mb-0 border-2 border-blue-500 hover:border-blue-400"
-                    >
-                      <span className="flex items-center gap-2">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        {contact.label}
-                      </span>
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    </Link>
-                  </div>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 w-full max-w-5xl">
+          {[
+            { name: "Next.js", color: "bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-gray-500/25" },
+            { name: "React", color: "bg-gradient-to-r from-cyan-400 to-cyan-500 text-black shadow-cyan-500/25" },
+            { name: "JavaScript", color: "bg-gradient-to-r from-yellow-400 to-yellow-500 text-black shadow-yellow-500/25" },
+            { name: "Node.js", color: "bg-gradient-to-r from-green-500 to-green-600 text-white shadow-green-500/25" },
+            { name: "Express", color: "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-orange-500/25" },
+            { name: "APIs REST", color: "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-emerald-500/25" },
+            { name: "HTML5", color: "bg-gradient-to-r from-orange-600 to-red-500 text-white shadow-orange-500/25" },
+            { name: "CSS3", color: "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-blue-500/25" },
+            { name: "SQL", color: "bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-purple-500/25" },
+            { name: "GitHub", color: "bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-gray-500/25" },
+            { name: "Netlify", color: "bg-gradient-to-r from-teal-400 to-teal-500 text-white shadow-teal-500/25" },
+            { name: "Trello", color: "bg-gradient-to-r from-blue-400 to-blue-500 text-white shadow-blue-500/25" }
+          ].map((tech, index) => (
+            <div
+              key={index}
+              className={`px-4 py-3 rounded-lg text-center font-semibold text-sm ${tech.color} hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+            >
+              {tech.name}
+            </div>
+          ))}
         </div>
       </div>
       <div className="relative">
-        <img
+        <Image
           src={pfp.image.url}
           alt={pfp.image.alt}
           width={375}

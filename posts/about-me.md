@@ -1,18 +1,30 @@
 ---
-title: "About Me"
-date: "2024-01-15"
-author: "Guilherme"
+title: "Project Public"
+date: "2025-01-15"
+author: "Guilherme Cirelli Lopes"
 public: true
 ---
 
+# Project Public
 
+Welcome to my public project showcase! This is a template for future content that will demonstrate my development skills and knowledge.
 
-![Profile Photo 1](/img/perfil2.jpeg)
+## What You'll Find Here
 
-![Profile Photo 2](/img/perfil3.jpeg)
+This section will feature:
+- **Technical tutorials** on modern web development
+- **Project walkthroughs** with code explanations
+- **Best practices** and development tips
+- **Industry insights** and trends
 
-My name is Guilherme Cirelli Lopes, an undergraduate student in Systems Analysis and Development at Unicesumar, passionate about web development. Known for dedication and integrity, I always strive to fulfill my commitments with excellence.
+## Content Structure
 
-Combining study, hands-on practice, and mentorship, I quickly absorb new knowledge and deliver effective solutions. Understanding problems deeply before building solutions is something I highly value, along with clear communication and organized documentation to enhance teamwork.
+Each post will include:
+- Clear explanations of concepts
+- Code examples with comments
+- Practical applications
+- Links to live demos and repositories
 
-Although still in the early stages of my career, I have developed solid skills in Next.js, JavaScript, and related technologies. Discipline, resilience, and continuous learning guide my growth. My goal is to keep evolving, leveraging my passion for software development to overcome challenges and create a positive impact in every project I undertake.
+## Stay Tuned
+
+I'm constantly working on new content that will help fellow developers and showcase my expertise. Check back regularly for updates!

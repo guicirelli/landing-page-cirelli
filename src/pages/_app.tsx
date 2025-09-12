@@ -1,4 +1,5 @@
 import { Layout } from '@/components/commons/Layout';
+import { ThemeProvider } from '@/components/commons/ThemeProvider';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ClerkProvider } from '@clerk/nextjs';
@@ -9,18 +10,22 @@ export default function App({ Component, pageProps }: AppProps) {
   // Se não há chave do Clerk, renderiza sem autenticação
   if (!PUBLISHABLE_KEY) {
     return (
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     );
   }
 
   return (
-    // @ts-expect-error
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY} initialState={pageProps.initialState}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ClerkProvider>
+    <ThemeProvider>
+      {/* @ts-expect-error */}
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} initialState={pageProps.initialState}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ClerkProvider>
+    </ThemeProvider>
   );
 }

@@ -1,21 +1,19 @@
 import { ReactNode } from 'react';
-import { JetBrains_Mono } from 'next/font/google';
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: '400',
-});
-
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className={jetbrains_mono.className}>
+    <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
       <Header />
-      {children}
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 };

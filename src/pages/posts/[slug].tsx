@@ -29,6 +29,7 @@ const Post = ({ postData }: PostProps) => {
       <div className="flex justify-center items-center mb-4">
         <Image 
           {...props} 
+          alt="Post image"
           width={300}
           height={300}
           className="w-full h-auto max-w-[10rem] md:max-w-[12rem] lg:max-w-[14rem] rounded-lg shadow-lg" 

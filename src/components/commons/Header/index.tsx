@@ -10,6 +10,8 @@ import dynamic from 'next/dynamic'; // Importar dynamic
 import { CustomSignInButton } from "@/components/commons/clerk/SignInButton";
 import { CustomSignOutButton } from "@/components/commons/clerk/SignOutButton";
 import { useRouter } from 'next/router'; // Importar useRouter
+import { ThemeToggle } from '@/components/commons/ThemeToggle';
+import { getMainMenu, getLogos } from '@/lib/settings';
 
 // Importar SignedIn e SignedOut dinamicamente para garantir que sejam renderizados apenas no cliente
 // @ts-expect-error
@@ -25,6 +27,8 @@ const roboto = Roboto({
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter(); // Obter o objeto router
+  const mainMenu = getMainMenu();
+  const logos = getLogos();
 
   const openMenu = useCallback(() => {
     setIsMenuOpen(true);
@@ -36,16 +40,45 @@ export const Header = () => {
 
   return (
     <header
-      className={`${roboto.className} bg-h-blue-900 text-sm flex py-1 px-5 justify-between items-center sticky top-0 z-20`}
+      className={`${roboto.className} bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20 shadow-sm`}
     >
+      {/* Logo */}
+      <div className="flex items-center gap-3">
+        <img
+          src={logos.mainLogo}
+          alt="Guilherme Cirelli Lopes"
+          className="w-10 h-10 rounded-full object-cover"
+        />
+        <span className="font-bold text-gray-900 dark:text-white text-lg">
+          Guilherme Cirelli
+        </span>
+      </div>
+
+      {/* Mobile menu button */}
       <button className="p-1 md:hidden" onClick={openMenu}>
-        <MenuIcon className="fill-white w-10 h-10" />
+        <MenuIcon className="fill-gray-700 dark:fill-white w-8 h-8" />
       </button>
-      <nav className="hidden md:flex items-center gap-4 text-md">
-        <Link href="/" className={`px-4 py-2 rounded-md ${router.pathname === '/' ? 'bg-h-blue-500' : 'bg-h-blue-700'} hover:bg-h-blue-600 transition-colors duration-200`}>Home</Link>
-        <Link href="/contatos" className={`px-4 py-2 rounded-md ${router.pathname === '/contatos' ? 'bg-h-blue-500' : 'bg-h-blue-700'} hover:bg-h-blue-600 transition-colors duration-200`}>Contact</Link>
+
+      {/* Desktop navigation */}
+      <nav className="hidden md:flex items-center gap-2 text-md">
+        {mainMenu.mainMenu?.map((item: any) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+              router.pathname === item.href
+                ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+            }`}
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
-      <div className="flex items-center gap-4">
+
+      {/* Right side actions */}
+      <div className="hidden md:flex items-center gap-4">
+        <ThemeToggle />
         {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && (
           <>
             <SignedIn>
@@ -59,6 +92,7 @@ export const Header = () => {
           </>
         )}
       </div>
+
       <Menu isVisible={isMenuOpen} onClose={closeMenu} />
     </header>
   );

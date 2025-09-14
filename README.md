@@ -4,7 +4,7 @@ Um portfolio pessoal moderno e responsivo desenvolvido com Next.js, TypeScript e
 
 ## 🚀 Características
 
-<<<<<<< HEAD
+
 1. Open the terminal and navigate to the directory where you want to clone the repository, then run the following command:
     ```bash
     git clone https://github.com/guicirelli/landing-page.cirelli
@@ -22,7 +22,7 @@ Um portfolio pessoal moderno e responsivo desenvolvido com Next.js, TypeScript e
     ```bash
     yarn dev
     ```
-=======
+
 - **Design Moderno**: Interface limpa e profissional com suporte a tema light/dark
 - **Responsivo**: Otimizado para todos os dispositivos (mobile-first)
 - **Performance**: Carregamento rápido com otimizações de SEO e lazy loading
@@ -30,7 +30,7 @@ Um portfolio pessoal moderno e responsivo desenvolvido com Next.js, TypeScript e
 - **Configurável**: Sistema de configuração baseado em JSONs
 - **Tipografia**: Fonte Inter Variable para melhor legibilidade
 - **SEO Otimizado**: Meta tags dinâmicas e structured data
->>>>>>> f86dba7 (atualizações layout com super prompt)
+
 
 ## 🛠️ Tecnologias Utilizadas
 

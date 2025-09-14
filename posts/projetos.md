@@ -1,11 +1,11 @@
 ---
-title: "Project Private"
+title: "Projeto Privado"
 date: "2025-01-15"
 author: "Guilherme Cirelli Lopes"
 public: false
 ---
 
-# Project Private
+# Projeto Privado
 
 This is a private project template showcasing advanced development concepts and exclusive content.
 

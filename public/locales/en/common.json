@@ -1,0 +1,138 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Pleasure, I am",
+    "titleBold": "Guilherme",
+    "subtitle": "Web developer passionate about creating efficient and practical solutions.",
+    "whatsapp": "WhatsApp",
+    "posts": {
+      "title": "My Projects"
+    },
+    "project": {
+      "private": "Private",
+      "public": "Public",
+      "loginRequired": "Please log in to view this post.",
+      "loginRequiredLabel": "(Private - login required)"
+    },
+    "technologies": {
+      "nextjs": "Next.js",
+      "react": "React",
+      "javascript": "JavaScript",
+      "nodejs": "Node.js",
+      "express": "Express",
+      "apis": "APIs REST",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "sql": "SQL",
+      "github": "GitHub",
+      "netlify": "Netlify",
+      "trello": "Trello"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "introduction": "Hello! I'm Guilherme Cirelli Lopes, a Systems Analysis and Development student 💻, known for being hardworking and honorable in keeping my promises. My goal is to help entrepreneurs 💡 and professionals like you transform ideas into successful digital projects 🌟, with scalable, modern and functional solutions.",
+    "education": {
+      "title": "Education",
+      "degree": "Undergraduate in Systems Analysis and Development",
+      "degreeShort": "Systems Analysis and Development"
+    },
+    "specialization": {
+      "title": "Specialization",
+      "area": "Full-Stack Web Development"
+    },
+    "services": {
+      "title": "💼 What can I do for your project?",
+      "items": [
+        "Development of responsive and modern websites that highlight your products or services.",
+        "Creation of customized web applications, with integrated Front-End and Back-End.",
+        "Optimization and deployment on platforms like Netlify and Vercel, ensuring performance and stability.",
+        "Structuring efficient systems using Node.js, SQL, ReactJS and NextJS.",
+        "Organized documentation and clear communication, facilitating teamwork and future maintenance."
+      ]
+    },
+    "whyChoose": {
+      "title": "🚀 Why choose to work with me?",
+      "items": [
+        "Total commitment: I deliver what I promise, studying and applying effective solutions.",
+        "Quick and constant learning: I'm always updated on the latest technologies 🔍, offering modern and efficient solutions.",
+        "Results-focused: Before coding, I analyze and deeply understand the problem, ensuring the solution meets your exact needs 💡."
+      ]
+    },
+    "skills": {
+      "title": "My technical skills:",
+      "frontend": "Front-End:",
+      "backend": "Back-End:",
+      "deploy": "Deploy & Optimization:",
+      "frontendTechs": "ReactJS | NextJS | HTML5 | CSS3 | Tailwind CSS | Bootstrap | JavaScript | TypeScript",
+      "backendTechs": "Node.js | SQL | REST APIs | Git | GitHub",
+      "deployTechs": "Netlify | Vercel"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Some of the projects I've developed to showcase my skills and passion for programming",
+    "featured": "Featured",
+    "viewCode": "View Code",
+    "viewDemo": "View Demo",
+    "interested": {
+      "title": "Interested in Working Together?",
+      "subtitle": "Let's create something amazing together!",
+      "description": "I'm always open to new opportunities and challenging projects. If you have an idea or need a developer for your team, don't hesitate to get in touch!",
+      "getInTouch": "Get in Touch"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's talk about your next project or job opportunity",
+    "letsTalk": "Let's Talk!",
+    "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationText": "Londrina, PR - Brazil",
+    "connect": {
+      "title": "Connect with Me",
+      "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!"
+    },
+    "social": {
+      "title": "Social Media"
+    },
+    "sendMessage": "Send a Message",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What's the subject?",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project or opportunity...",
+    "sendButton": "Send Message",
+    "availability": {
+      "title": "Availability",
+      "subtitle": "When I can start your project",
+      "available": "Available",
+      "availableDesc": "I'm available for new projects and opportunities",
+      "quickResponse": "Quick Response",
+      "quickResponseDesc": "I respond within 24 hours on business days",
+      "flexible": "Flexible",
+      "flexibleDesc": "I work remotely and adapt to your schedule"
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "copyright": "© 2025 Guilherme Cirelli Lopes. All rights reserved. Built with Next.js and lots of ☕."
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "download": {
+    "resume": "Download Resume"
+  }
+}

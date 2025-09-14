@@ -1,4 +1,5 @@
 import { getBusinessSettings, getGeneralSettings, getLinkTreeData } from '@/lib/settings';
+import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -7,6 +8,7 @@ interface FooterProps {
 }
 
 export const Footer = ({ className = "" }: FooterProps) => {
+  const { t } = useLanguage();
   const businessSettings = getBusinessSettings();
   const generalSettings = getGeneralSettings();
   const linkTreeData = getLinkTreeData();
@@ -77,26 +79,26 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                  Home
+                  {t('navigation.home')}
                 </Link>
               </li>
               <li>
                 <Link href="/sobre" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                  About
+                  {t('navigation.about')}
                 </Link>
               </li>
               <li>
                 <Link href="/projetos" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                  Projects
+                  {t('navigation.projects')}
                 </Link>
               </li>
               <li>
                 <Link href="/contato" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                  Contact
+                  {t('navigation.contact')}
                 </Link>
               </li>
             </ul>
@@ -104,7 +106,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Contact</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.contact')}</h3>
             <div className="space-y-2">
               <p className="text-gray-600 dark:text-gray-300">
                 <a 
@@ -132,7 +134,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {generalSettings.footerText}
+              {t('footer.copyright')}
             </p>
             <p className="text-gray-500 dark:text-gray-500 text-sm">
               © {new Date().getFullYear()} {businessSettings.brandName}

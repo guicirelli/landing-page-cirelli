@@ -1,6 +1,7 @@
 import { MenuCloseIcon } from '@/components/icons/MenuCloseIcon';
 import { ThemeToggle } from '@/components/commons/ThemeToggle';
-import { getMainMenu } from '@/lib/settings';
+import { LanguageSwitcher } from '@/components/commons/LanguageSwitcher';
+import { useLanguage } from '@/contexts/LanguageContext';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,7 +11,7 @@ interface MenuProps {
 }
 
 export const Menu = ({ isVisible, onClose }: MenuProps) => {
-  const mainMenu = getMainMenu();
+  const { t } = useLanguage();
 
   return (
     <div
@@ -37,6 +38,7 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
             </span>
           </Link>
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button onClick={onClose}>
               <MenuCloseIcon className="fill-gray-700 dark:fill-white w-8 h-8" />
@@ -44,16 +46,34 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
           </div>
         </div>
         <nav className="flex flex-col gap-5 text-xl p-5 items-center">
-          {mainMenu.mainMenu?.map((item: any) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={onClose}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-            >
-              {item.label}
-            </Link>
-          ))}
+          <Link
+            href="/"
+            onClick={onClose}
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          >
+            {t('navigation.home')}
+          </Link>
+          <Link
+            href="/sobre"
+            onClick={onClose}
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          >
+            {t('navigation.about')}
+          </Link>
+          <Link
+            href="/projetos"
+            onClick={onClose}
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          >
+            {t('navigation.projects')}
+          </Link>
+          <Link
+            href="/contato"
+            onClick={onClose}
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          >
+            {t('navigation.contact')}
+          </Link>
         </nav>
       </div>
     </div>

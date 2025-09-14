@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 import { PageSection } from '@/components/commons/PageSection';
 
@@ -10,6 +11,7 @@ interface ProjetosProps {
 }
 
 const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
+  const { t } = useLanguage();
   const projetos = [
     {
       id: 1,
@@ -67,8 +69,8 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
 
       <div className="min-h-screen">
         <PageSection
-          title="My Projects"
-          subtitle="Some of the projects I've developed to showcase my skills and passion for programming"
+          title={t('projects.title')}
+          subtitle={t('projects.subtitle')}
           vPadding="py-20"
         >
           <div className="col-span-full">
@@ -90,7 +92,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                     />
                     {projeto.featured && (
                       <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Featured
+                        {t('projects.featured')}
                       </div>
                     )}
                   </div>
@@ -118,7 +120,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                         rel="noopener noreferrer"
                         className="flex-1 bg-gray-900 dark:bg-gray-700 text-white text-center py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
                       >
-                        View Code
+                        {t('projects.viewCode')}
                       </a>
                       <a
                         href={projeto.demo}
@@ -126,7 +128,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                         rel="noopener noreferrer"
                         className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
                       >
-                        View Demo
+                        {t('projects.viewDemo')}
                       </a>
                     </div>
                   </div>
@@ -138,16 +140,14 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
 
 
         <PageSection
-          title="Interested in Working Together?"
-          subtitle="Let's create something amazing together!"
-          ctaBtnText="Get in Touch"
+          title={t('projects.interested.title')}
+          subtitle={t('projects.interested.subtitle')}
+          ctaBtnText={t('projects.interested.getInTouch')}
           ctaBtnLink="/contato"
         >
           <div className="col-span-full text-center">
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  I&apos;m always open to new opportunities and challenging projects. 
-                  If you have an idea or need a developer for your team, 
-                  don&apos;t hesitate to get in touch!
+                  {t('projects.interested.description')}
                 </p>
           </div>
         </PageSection>

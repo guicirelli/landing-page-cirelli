@@ -59,10 +59,9 @@ export const Inicio = ({ aboutMe }: AboutMeProps) => {
           className="rounded-full"
         />
         <p className="p-3 w-fit text-base leading-tight bg-h-blue-500 rounded-xl text-black absolute -bottom-[0.75rem] sm:bottom-3">
-          <strong className="text-2xl">Undergraduate in Systems Analysis and Development</strong>
+          <strong className="text-2xl">{t('about.education.degree')}</strong>
           <br />
-        
-           Systems Analysis and Development
+          {t('about.education.degreeShort')}
         </p>
       </div>
     </main>

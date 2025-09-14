@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link'; // Importar Link
 import { getSortedPostsData, PostData } from '@/lib/posts'; // Importar funções de posts
 import { useUser } from "@clerk/nextjs"; // Importar useUser
+import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 
 import homeData from '../../public/home.json';
@@ -26,15 +27,16 @@ interface HomeProps {
 
 const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomeProps) => {
   const { aboutMe } = home || { aboutMe: {} as TAboutMe };
+  const { t } = useLanguage();
   const { isSignedIn } = useUser(); // Usar o hook useUser
 
   return (
     <>
       <Head>
-        <title>{businessSettings.brandName} | Portfolio</title>
+        <title>{t('home.title')} - {t('home.subtitle')}</title>
         <meta
           name="description"
-          content={businessSettings.brandDescription}
+          content={t('home.description')}
         />
         <meta name="keywords" content={businessSettings.brandKeywords.join(', ')} />
         <meta property="og:title" content={`${businessSettings.brandName} | Portfolio`} />
@@ -50,19 +52,19 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
 
         {/* Posts Section */}
         <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg py-12 px-6 md:px-20 my-16 max-w-6xl mx-auto border border-gray-200 dark:border-gray-700">
-          <h2 className="text-5xl font-bold mb-8 text-center text-gray-900 dark:text-white">Posts</h2>
+          <h2 className="text-5xl font-bold mb-8 text-center text-gray-900 dark:text-white">{t('home.posts.title')}</h2>
           <ul className="space-y-6">
             {allPostsData.map(({ slug, title, date, public: isPublic }) => (
               <li key={slug} className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300">
                 {!isPublic && !isSignedIn ? (
                   <div className="text-red-500 dark:text-red-400">
-                    <h3 className="text-3xl font-semibold">{title} (Private)</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">Please log in to view this post.</p>
+                    <h3 className="text-3xl font-semibold">{title} ({t('home.project.private')})</h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{t('home.project.loginRequired')}</p>
                   </div>
                 ) : (
                   <Link href={`/posts/${slug}`} className="block">
                     <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200">{title}</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{isPublic ? "(Public)" : "(Private - login required)"}</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{isPublic ? `(${t('home.project.public')})` : t('home.project.loginRequiredLabel')}</p>
                   </Link>
                 )}
               </li>
@@ -89,7 +91,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       home,
       allPostsData,
       businessSettings,
-      generalSettings
+      generalSettings,
     },
   };
 };

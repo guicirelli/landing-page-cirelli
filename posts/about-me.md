@@ -1,11 +1,11 @@
 ---
-title: "Project Public"
+title: "Projeto Público"
 date: "2025-01-15"
 author: "Guilherme Cirelli Lopes"
 public: true
 ---
 
-# Project Public
+# Projeto Público
 
 Welcome to my public project showcase! This is a template for future content that will demonstrate my development skills and knowledge.
 

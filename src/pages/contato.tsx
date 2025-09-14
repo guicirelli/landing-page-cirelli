@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings, getLinkTreeData } from '@/lib/settings';
 import { PageSection } from '@/components/commons/PageSection';
 // Removed react-icons import
@@ -11,6 +12,8 @@ interface ContatoProps {
 }
 
 const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoProps) => {
+  const { t } = useLanguage();
+  
   const getIcon = (iconName: string) => {
     const icons: { [key: string]: any } = {
       FaLinkedin: () => (
@@ -47,8 +50,8 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
 
       <div className="min-h-screen">
         <PageSection
-          title="Get in Touch"
-          subtitle="Let's talk about your next project or job opportunity"
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
           vPadding="py-20"
         >
           <div className="col-span-full">
@@ -56,12 +59,10 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
               {/* Contact Information */}
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-                  Let&apos;s Talk!
+                  {t('contact.connect.title')}
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  I&apos;m always interested in new projects and opportunities. 
-                  If you have an idea or need a developer for your team, 
-                  don&apos;t hesitate to get in touch!
+                  {t('contact.connect.description')}
                 </p>
 
                 <div className="space-y-6">
@@ -73,7 +74,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact.email')}</h3>
                       <a 
                         href={`mailto:${businessSettings.brandEmail}`}
                         className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -90,7 +91,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact.phone')}</h3>
                       <a 
                         href={`tel:${businessSettings.brandPhone}`}
                         className="text-green-600 dark:text-green-400 hover:underline"
@@ -107,8 +108,8 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white">Location</h3>
-                      <p className="text-gray-600 dark:text-gray-300">Londrina, PR - Brazil</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact.location')}</h3>
+                      <p className="text-gray-600 dark:text-gray-300">{t('contact.locationText')}</p>
                     </div>
                   </div>
                 </div>
@@ -116,7 +117,7 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                 {/* Social Media */}
                 <div className="mt-8">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    Connect with Me
+                    {t('contact.social.title')}
                   </h3>
                   <div className="flex gap-4">
                     {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
@@ -154,62 +155,62 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
               {/* Contact Form */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Send a Message
+                  {t('contact.sendMessage')}
                 </h3>
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Name
+                      {t('contact.name')}
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                      placeholder="Your full name"
+                      placeholder={t('contact.namePlaceholder')}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Email
+                      {t('contact.email')}
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                      placeholder="your@email.com"
+                      placeholder={t('contact.emailPlaceholder')}
                     />
                   </div>
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Subject
+                      {t('contact.subject')}
                     </label>
                     <input
                       type="text"
                       id="subject"
                       name="subject"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                      placeholder="What's the subject?"
+                      placeholder={t('contact.subjectPlaceholder')}
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Message
+                      {t('contact.message')}
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={5}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                      placeholder="Tell me about your project or opportunity..."
+                      placeholder={t('contact.messagePlaceholder')}
                     ></textarea>
                   </div>
                   <button
                     type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                   >
-                    Send Message
+                    {t('contact.sendButton')}
                   </button>
                 </form>
               </div>
@@ -218,8 +219,8 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
         </PageSection>
 
         <PageSection
-          title="Availability"
-          subtitle="When I can start your project"
+          title={t('contact.availability.title')}
+          subtitle={t('contact.availability.subtitle')}
           bgColor="bg-gray-50 dark:bg-gray-800"
         >
           <div className="col-span-full">
@@ -229,10 +230,10 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                   <span className="text-2xl">🚀</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Available
+                  {t('contact.availability.available')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I&apos;m available for new projects and opportunities
+                  {t('contact.availability.availableDesc')}
                 </p>
               </div>
               <div className="text-center">
@@ -240,10 +241,10 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                   <span className="text-2xl">⏰</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Quick Response
+                  {t('contact.availability.quickResponse')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I respond within 24 hours on business days
+                  {t('contact.availability.quickResponseDesc')}
                 </p>
               </div>
               <div className="text-center">
@@ -251,10 +252,10 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                   <span className="text-2xl">💼</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Flexible
+                  {t('contact.availability.flexible')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I work remotely and adapt to your schedule
+                  {t('contact.availability.flexibleDesc')}
                 </p>
               </div>
             </div>

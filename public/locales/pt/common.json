@@ -1,0 +1,138 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "title": "Prazer, eu sou",
+    "titleBold": "Guilherme",
+    "subtitle": "Desenvolvedor web apaixonado por criar soluções eficientes e práticas.",
+    "whatsapp": "WhatsApp",
+    "posts": {
+      "title": "Meus Projetos"
+    },
+    "project": {
+      "private": "Privado",
+      "public": "Público",
+      "loginRequired": "Faça login para visualizar este post.",
+      "loginRequiredLabel": "(Privado - login necessário)"
+    },
+    "technologies": {
+      "nextjs": "Next.js",
+      "react": "React",
+      "javascript": "JavaScript",
+      "nodejs": "Node.js",
+      "express": "Express",
+      "apis": "APIs REST",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "sql": "SQL",
+      "github": "GitHub",
+      "netlify": "Netlify",
+      "trello": "Trello"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "introduction": "Olá! Sou Guilherme Cirelli Lopes, estudante de Análise e Desenvolvimento de Sistemas 💻, conhecido por ser esforçado e honrado em cumprir o que prometo. Meu objetivo é ajudar empreendedores 💡 e profissionais como você a transformar ideias em projetos digitais de sucesso 🌟, com soluções escaláveis, modernas e funcionais.",
+    "education": {
+      "title": "Educação",
+      "degree": "Graduando em Análise e Desenvolvimento de Sistemas",
+      "degreeShort": "Análise e Desenvolvimento de Sistemas"
+    },
+    "specialization": {
+      "title": "Especialização",
+      "area": "Desenvolvimento Web Full-Stack"
+    },
+    "services": {
+      "title": "💼 O que posso fazer pelo seu projeto?",
+      "items": [
+        "Desenvolvimento de sites responsivos e modernos, que destacam seus produtos ou serviços.",
+        "Criação de aplicações web personalizadas, com Front-End e Back-End integrados.",
+        "Otimização e deploy em plataformas como Netlify e Vercel, garantindo performance e estabilidade.",
+        "Estruturação de sistemas eficientes usando Node.js, SQL, ReactJS e NextJS.",
+        "Documentação organizada e comunicação clara, facilitando o trabalho em equipe e futuras manutenções."
+      ]
+    },
+    "whyChoose": {
+      "title": "🚀 Por que escolher trabalhar comigo?",
+      "items": [
+        "Comprometimento total: cumpro o que prometo, estudando e aplicando soluções eficazes.",
+        "Aprendizado rápido e constante: estou sempre atualizado nas tecnologias mais recentes 🔍, oferecendo soluções modernas e eficientes.",
+        "Foco em resultados: antes de codificar, analiso e entendo profundamente o problema, garantindo que a solução atenda exatamente às suas necessidades 💡."
+      ]
+    },
+    "skills": {
+      "title": "Minhas habilidades técnicas:",
+      "frontend": "Front-End:",
+      "backend": "Back-End:",
+      "deploy": "Deploy & Otimização:",
+      "frontendTechs": "ReactJS | NextJS | HTML5 | CSS3 | Tailwind CSS | Bootstrap | JavaScript | TypeScript",
+      "backendTechs": "Node.js | SQL | APIs REST | Git | GitHub",
+      "deployTechs": "Netlify | Vercel"
+    }
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "subtitle": "Alguns dos projetos que desenvolvi para mostrar minhas habilidades e paixão pela programação",
+    "featured": "Destaque",
+    "viewCode": "Ver Código",
+    "viewDemo": "Ver Demo",
+    "interested": {
+      "title": "Interessado em trabalhar juntos?",
+      "subtitle": "Vamos criar algo incrível juntos!",
+      "description": "Estou sempre aberto a novas oportunidades e projetos desafiadores. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!",
+      "getInTouch": "Entrar em Contato"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Vamos conversar sobre seu próximo projeto ou oportunidade de trabalho",
+    "letsTalk": "Vamos Conversar!",
+    "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!",
+    "email": "Email",
+    "phone": "Telefone",
+    "location": "Localização",
+    "locationText": "Londrina, PR - Brasil",
+    "connect": {
+      "title": "Conecte-se Comigo",
+      "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!"
+    },
+    "social": {
+      "title": "Redes Sociais"
+    },
+    "sendMessage": "Enviar Mensagem",
+    "name": "Nome",
+    "namePlaceholder": "Seu nome completo",
+    "emailPlaceholder": "seu@email.com",
+    "subject": "Assunto",
+    "subjectPlaceholder": "Qual é o assunto?",
+    "message": "Mensagem",
+    "messagePlaceholder": "Conte-me sobre seu projeto ou oportunidade...",
+    "sendButton": "Enviar Mensagem",
+    "availability": {
+      "title": "Disponibilidade",
+      "subtitle": "Quando posso começar seu projeto",
+      "available": "Disponível",
+      "availableDesc": "Estou disponível para novos projetos e oportunidades",
+      "quickResponse": "Resposta Rápida",
+      "quickResponseDesc": "Respondo em até 24 horas em dias úteis",
+      "flexible": "Flexível",
+      "flexibleDesc": "Trabalho remotamente e me adapto ao seu cronograma"
+    }
+  },
+  "footer": {
+    "quickLinks": "Links Rápidos",
+    "contact": "Contato",
+    "copyright": "© 2025 Guilherme Cirelli Lopes. Todos os direitos reservados. Construído com Next.js e muito ☕."
+  },
+  "auth": {
+    "signIn": "Entrar",
+    "signOut": "Sair"
+  },
+  "download": {
+    "resume": "Baixar Currículo"
+  }
+}

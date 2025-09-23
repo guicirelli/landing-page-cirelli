@@ -3,6 +3,7 @@
     "home": "Início",
     "about": "Sobre",
     "projects": "Projetos",
+    "blog": "Blog",
     "contact": "Contato"
   },
   "home": {
@@ -121,6 +122,20 @@
       "quickResponseDesc": "Respondo em até 24 horas em dias úteis",
       "flexible": "Flexível",
       "flexibleDesc": "Trabalho remotamente e me adapto ao seu cronograma"
+    },
+    "errors": {
+      "nameRequired": "Nome é obrigatório",
+      "emailRequired": "Email é obrigatório",
+      "emailInvalid": "Email inválido",
+      "subjectRequired": "Assunto é obrigatório",
+      "messageRequired": "Mensagem é obrigatória",
+      "messageTooShort": "Mensagem deve ter pelo menos 10 caracteres"
+    },
+    "sending": "Enviando...",
+    "success": {
+      "title": "Mensagem Enviada!",
+      "message": "Obrigado pelo seu contato! Responderei em breve.",
+      "sendAnother": "Enviar Outra Mensagem"
     }
   },
   "footer": {
@@ -134,5 +149,67 @@
   },
   "download": {
     "resume": "Baixar Currículo"
+  },
+  "cta": {
+    "letsTalk": "Vamos Conversar",
+    "getInTouch": "Entrar em Contato",
+    "viewProjects": "Ver Projetos",
+    "hireMe": "Contratar Agora",
+    "contactNow": "Fale Comigo",
+    "startProject": "Iniciar Projeto"
+  },
+  "socialProof": {
+    "title": "Por que me escolher?",
+    "stats": {
+      "projects": "Projetos Concluídos",
+      "experience": "Anos de Experiência",
+      "technologies": "Tecnologias Dominadas",
+      "response": "Horas de Resposta"
+    },
+    "testimonials": {
+      "title": "O que dizem sobre meu trabalho",
+      "placeholder": "Depoimentos de clientes em breve..."
+    }
+  },
+  "blog": {
+    "title": "📅 Linha do Tempo",
+    "subtitle": "Minha jornada na programação e desenvolvimento",
+    "timeline": [
+      {
+        "date": "Fev 2024",
+        "title": "Início na Análise e Desenvolvimento de Sistemas",
+        "description": "Comecei minha jornada acadêmica no curso superior de ADS, aprendendo os fundamentos essenciais: lógica de programação, algoritmos e estrutura de dados. Descobri como os computadores realmente funcionam, desde os sistemas binários até as redes."
+      },
+      {
+        "date": "Mar 2024 – Maio 2024",
+        "title": "Primeiros Passos no Desenvolvimento Web",
+        "description": "Mergulhei no mundo do desenvolvimento web, aprendendo HTML5, CSS3 e JavaScript. Criei meus primeiros sites e descobri a importância do Git para trabalhar em equipe. Foquei em fazer páginas que funcionam bem em qualquer dispositivo."
+      },
+      {
+        "date": "Jun 2024 – Dez 2024",
+        "title": "Explorando o Desenvolvimento Web",
+        "description": "Aprofundei meus conhecimentos criando projetos mais complexos. Aprendi a trabalhar com APIs, melhorar a experiência do usuário e dar os primeiros passos com Node.js no back-end. Cada projeto trouxe novos desafios e aprendizados."
+      },
+      {
+        "date": "Jan 2025",
+        "title": "Início na A.Yoshii Engenharia",
+        "description": "Conquistei minha primeira oportunidade profissional como Assistente de TI. Aqui, coloco em prática meus conhecimentos, ajudando a manter sistemas funcionando e resolvendo problemas reais de infraestrutura de TI."
+      },
+      {
+        "date": "Fev 2025 – Jun 2025",
+        "title": "Desenvolvendo Soluções Completas",
+        "description": "Dediquei-me a criar aplicações web do zero, unindo front-end e back-end. Trabalhei com Next.js e Node.js, sempre pensando na qualidade do código e na experiência do usuário. Cada projeto me ensinou algo novo sobre desenvolvimento profissional."
+      },
+      {
+        "date": "Jul 2025 – Atual",
+        "title": "Aprendizado com Mentoria",
+        "description": "Iniciei um programa de mentoria personalizado para aprimorar minhas habilidades em desenvolvimento web. Estou aprendendo as melhores práticas do mercado e construindo projetos reais com Next.js, React e Node.js."
+      },
+      {
+        "date": "Set 2025 – Em andamento",
+        "title": "Construindo Meu Futuro",
+        "description": "Trabalho no meu portfolio e em projetos pessoais, colocando em prática tudo que aprendi. Busco contribuir com a comunidade open source e continuo aprendendo novas tecnologias e métodos de desenvolvimento."
+      }
+    ]
   }
 }

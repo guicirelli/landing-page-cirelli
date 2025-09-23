@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "blog": "Blog",
     "contact": "Contact"
   },
   "home": {
@@ -121,6 +122,20 @@
       "quickResponseDesc": "I respond within 24 hours on business days",
       "flexible": "Flexible",
       "flexibleDesc": "I work remotely and adapt to your schedule"
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageTooShort": "Message must be at least 10 characters"
+    },
+    "sending": "Sending...",
+    "success": {
+      "title": "Message Sent!",
+      "message": "Thank you for your contact! I'll respond soon.",
+      "sendAnother": "Send Another Message"
     }
   },
   "footer": {
@@ -134,5 +149,67 @@
   },
   "download": {
     "resume": "Download Resume"
+  },
+  "cta": {
+    "letsTalk": "Let's Talk",
+    "getInTouch": "Get in Touch",
+    "viewProjects": "View Projects",
+    "hireMe": "Hire Me",
+    "contactNow": "Contact Now",
+    "startProject": "Start Project"
+  },
+  "socialProof": {
+    "title": "Why choose me?",
+    "stats": {
+      "projects": "Projects Completed",
+      "experience": "Years of Experience",
+      "technologies": "Technologies Mastered",
+      "response": "Response Time"
+    },
+    "testimonials": {
+      "title": "What they say about my work",
+      "placeholder": "Client testimonials coming soon..."
+    }
+  },
+  "blog": {
+    "title": "📅 Timeline",
+    "subtitle": "My journey in programming and development",
+    "timeline": [
+      {
+        "date": "Feb 2024",
+        "title": "Beginning in Systems Analysis and Development",
+        "description": "Started my academic journey in the ADS degree program, learning the essential fundamentals: programming logic, algorithms, and data structures. Discovered how computers really work, from binary systems to networks."
+      },
+      {
+        "date": "Mar 2024 – May 2024",
+        "title": "First Steps in Web Development",
+        "description": "Dove into the world of web development, learning HTML5, CSS3, and JavaScript. Created my first websites and discovered the importance of Git for teamwork. Focused on making pages that work well on any device."
+      },
+      {
+        "date": "Jun 2024 – Dec 2024",
+        "title": "Exploring Web Development",
+        "description": "Deepened my knowledge by creating more complex projects. Learned to work with APIs, improve user experience, and take first steps with Node.js in back-end. Each project brought new challenges and learnings."
+      },
+      {
+        "date": "Jan 2025",
+        "title": "Starting at A.Yoshii Engenharia",
+        "description": "Secured my first professional opportunity as an IT Assistant. Here, I put my knowledge into practice, helping to keep systems running and solving real IT infrastructure problems."
+      },
+      {
+        "date": "Feb 2025 – Jun 2025",
+        "title": "Building Complete Solutions",
+        "description": "Dedicated myself to creating web applications from scratch, combining front-end and back-end. Worked with Next.js and Node.js, always thinking about code quality and user experience. Each project taught me something new about professional development."
+      },
+      {
+        "date": "Jul 2025 – Current",
+        "title": "Learning through Mentorship",
+        "description": "Started a personalized mentorship program to enhance my web development skills. Learning industry best practices and building real projects with Next.js, React, and Node.js."
+      },
+      {
+        "date": "Sep 2025 – In progress",
+        "title": "Building My Future",
+        "description": "Working on my portfolio and personal projects, putting everything I've learned into practice. Looking to contribute to the open source community and continuing to learn new technologies and development methods."
+      }
+    ]
   }
 }

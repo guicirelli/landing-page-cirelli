@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import React, { SVGProps } from 'react';
 
 interface CopyIconProps extends SVGProps<SVGSVGElement> {
   title?: string;

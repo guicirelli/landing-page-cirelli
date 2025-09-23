@@ -1,7 +1,8 @@
-import Image from 'next/image';
+import { OptimizedImage } from '@/components/commons/OptimizedImage';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { AboutMe as TAboutMe } from '@/types/Home';
+import { trackEvent } from '@/lib/analytics';
 
 interface AboutMeProps {
   aboutMe: TAboutMe;
@@ -19,9 +20,25 @@ export const Inicio = ({ aboutMe }: AboutMeProps) => {
           <strong className="text-blue-600 dark:text-blue-400">{t('home.titleBold')}</strong>
         </h1>
         <div className="mb-8">
-          <h2 className="mb-8 text-gray-700 dark:text-gray-300 text-xl">
+          <h2 className="mb-6 text-gray-700 dark:text-gray-300 text-xl">
             {t('home.subtitle')}
           </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start">
+            <Link
+              href="/contato"
+              onClick={() => trackEvent('click', 'CTA', 'Lets Talk - Hero')}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              {t('cta.letsTalk')}
+            </Link>
+            <Link
+              href="/projetos"
+              onClick={() => trackEvent('click', 'CTA', 'View Projects - Hero')}
+              className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              {t('cta.viewProjects')}
+            </Link>
+          </div>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 w-full max-w-5xl">
@@ -49,17 +66,17 @@ export const Inicio = ({ aboutMe }: AboutMeProps) => {
         </div>
       </div>
       <div className="relative">
-        <Image
+        <OptimizedImage
           src={pfp.image.url}
           alt={pfp.image.alt}
           width={375}
           height={375}
           className="rounded-full shadow-2xl"
+          priority
         />
-        <p className="p-3 w-fit text-base leading-tight bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-xl absolute -bottom-[0.75rem] sm:bottom-3 shadow-lg">
-          <strong className="text-2xl">{t('about.education.degree')}</strong>
-          <br />
-          {t('about.education.degreeShort')}
+        <p className="px-6 py-3.5 w-[375px] text-lg leading-tight bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-lg absolute -bottom-32 sm:-bottom-24 left-1/2 -translate-x-1/2 shadow-md text-center">
+          <strong className="text-[21px] block mb-0.5">{t('about.education.degree')}</strong>
+          <span className="text-[16px] opacity-90 inline-block">{t('about.education.degreeShort')}</span>
         </p>
       </div>
     </main>

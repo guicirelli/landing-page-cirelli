@@ -97,6 +97,16 @@ export const Header = () => {
           {t('navigation.projects')}
         </Link>
         <Link
+          href="/blog"
+          className={`px-4 py-2 rounded-md transition-colors duration-200 ${
+            router.pathname === '/blog'
+              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+          }`}
+        >
+          {t('navigation.blog')}
+        </Link>
+        <Link
           href="/contato"
           className={`px-4 py-2 rounded-md transition-colors duration-200 ${
             router.pathname === '/contato'

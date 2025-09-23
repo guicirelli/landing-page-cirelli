@@ -1,12 +1,28 @@
+import React from 'react';
 import { Layout } from '@/components/commons/Layout';
 import { ThemeProvider } from '@/components/commons/ThemeProvider';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { GoogleAnalytics } from '@/components/commons/GoogleAnalytics';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import * as gtag from '@/lib/gtag';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ClerkProvider } from '@clerk/nextjs';
 
 function App({ Component, pageProps }: AppProps) {
   const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   // Se não há chave do Clerk, renderiza sem autenticação
   if (!PUBLISHABLE_KEY) {
@@ -24,6 +40,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <LanguageProvider>
       <ThemeProvider>
+        <GoogleAnalytics />
         {/* @ts-expect-error */}
         <ClerkProvider 
           publishableKey={PUBLISHABLE_KEY} 

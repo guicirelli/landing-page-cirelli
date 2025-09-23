@@ -1,7 +1,15 @@
 // Configurações estáticas para evitar problemas com fs no cliente
-const businessSettings = {
+const businessSettingsPT = {
   "brandName": "Guilherme Cirelli Lopes",
   "brandDescription": "Desenvolvedor web apaixonado por criar soluções eficientes e práticas.",
+  "brandEmail": "guilopes.030206@gmail.com",
+  "brandKeywords": ["Desenvolvedor Web", "Portfolio", "JavaScript", "Next.js", "React", "Node.js"],
+  "brandPhone": "+55 43 99157-5781"
+};
+
+const businessSettingsEN = {
+  "brandName": "Guilherme Cirelli Lopes",
+  "brandDescription": "Web developer passionate about delivering efficient and practical solutions.",
   "brandEmail": "guilopes.030206@gmail.com",
   "brandKeywords": ["Web Developer", "Portfolio", "JavaScript", "Next.js", "React", "Node.js"],
   "brandPhone": "+55 43 99157-5781"
@@ -107,7 +115,14 @@ const linkTreeData = {
 
 // Configurações de negócio
 export const getBusinessSettings = () => {
-  return businessSettings;
+  // Verifica se está no cliente
+  if (typeof window !== 'undefined') {
+    // Pega o idioma do localStorage ou usa o padrão
+    const language = localStorage.getItem('language') || 'pt';
+    return language === 'pt' ? businessSettingsPT : businessSettingsEN;
+  }
+  // No servidor, retorna o padrão em português
+  return businessSettingsPT;
 };
 
 // Configurações gerais

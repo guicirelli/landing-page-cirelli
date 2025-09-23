@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Roboto } from 'next/font/google';
 import { AboutMe as TAboutMe } from '@/types/Home';
-
+import { useLanguage } from '@/contexts/LanguageContext';
 
 
 const roboto = Roboto({
@@ -16,6 +16,7 @@ interface AboutMeProps {
 
 export const Inicio = ({ aboutMe }: AboutMeProps) => {
   const { title, description, contact, pfp, techs } = aboutMe;
+  const { t } = useLanguage();
 
   return (
     <main className="flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32 py-8 text-lg text-center xl:text-left xl:flex-nowrap xl:justify-between">

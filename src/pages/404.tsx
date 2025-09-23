@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Roboto } from 'next/font/google';
@@ -7,7 +8,7 @@ const roboto = Roboto({
   weight: '500',
 });
 
-const NotFound = () => {
+const NotFound: NextPage = () => {
   return (
     <>
       <Head>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { CopyIcon } from '../icons/CopyIcon';
 
 interface CopyButtonProps {

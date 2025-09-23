@@ -33,19 +33,66 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
   return (
     <>
       <Head>
-        <title>{t('home.title')} - {t('home.subtitle')}</title>
+        {/* SEO básico */}
+        <title>Guilherme Cirelli — Desenvolvedor Full Stack | Next.js, React, Node.js</title>
         <meta
           name="description"
-          content={t('home.description')}
+          content="Desenvolvedor Full Stack especializado em Next.js, React e Node.js. Criação de aplicações web modernas, responsivas e escaláveis. Veja meu portfolio e entre em contato."
         />
-        <meta name="keywords" content={businessSettings.brandKeywords.join(', ')} />
-        <meta property="og:title" content={`${businessSettings.brandName} | Portfolio`} />
-        <meta property="og:description" content={businessSettings.brandDescription} />
-        <meta property="og:type" content="website" />
+        <meta name="keywords" content="desenvolvedor full stack, next.js, react, node.js, typescript, desenvolvimento web" />
+        <link rel="canonical" href={generalSettings.siteUrl} />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Guilherme Cirelli — Desenvolvedor Full Stack" />
+        <meta property="og:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
         <meta property="og:url" content={generalSettings.siteUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${businessSettings.brandName} | Portfolio`} />
-        <meta name="twitter:description" content={businessSettings.brandDescription} />
+        <meta property="og:image" content={`${generalSettings.siteUrl}/img/og-image.jpg`} />
+        <meta property="og:image:alt" content="Portfolio Guilherme Cirelli - Desenvolvedor Full Stack" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Guilherme Cirelli — Desenvolvedor Full Stack" />
+        <meta name="twitter:description" content="Desenvolvimento de aplicações web modernas com Next.js, React e Node.js. Veja meu portfolio de projetos." />
+        <meta name="twitter:image" content={`${generalSettings.siteUrl}/img/twitter-image.jpg`} />
+
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "name": "Guilherme Cirelli",
+                  "jobTitle": "Desenvolvedor Full Stack",
+                  "url": generalSettings.siteUrl,
+                  "image": `${generalSettings.siteUrl}/img/perfil.jpeg`,
+                  "sameAs": [
+                    "https://github.com/seu-github",
+                    "https://linkedin.com/in/seu-linkedin"
+                  ],
+                  "knowsAbout": [
+                    "Next.js",
+                    "React",
+                    "Node.js",
+                    "TypeScript",
+                    "Desenvolvimento Web Full Stack"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "name": "Portfolio Guilherme Cirelli",
+                  "url": generalSettings.siteUrl,
+                  "description": "Portfolio profissional de Guilherme Cirelli, desenvolvedor Full Stack especializado em Next.js, React e Node.js",
+                  "inLanguage": "pt-BR"
+                }
+              ]
+            })
+          }}
+        />
       </Head>
       <div className="pt-0 pb-2 px-6 md:px-32 space-y-6 md:space-y-12">
         <Inicio aboutMe={aboutMe} />
@@ -70,6 +117,22 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
               </li>
             ))}
           </ul>
+          
+          {/* CTA Section */}
+          <div className="text-center mt-12">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              {t('projects.interested.title')}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+              {t('projects.interested.description')}
+            </p>
+            <Link
+              href="/contato"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              {t('cta.startProject')}
+            </Link>
+          </div>
         </section>
       </div>
     </>

@@ -9,6 +9,7 @@ interface FooterProps {
 
 export const Footer = ({ className = "" }: FooterProps) => {
   const { t } = useLanguage();
+  const { language } = useLanguage();
   const businessSettings = getBusinessSettings();
   const generalSettings = getGeneralSettings();
   const linkTreeData = getLinkTreeData();
@@ -94,6 +95,11 @@ export const Footer = ({ className = "" }: FooterProps) => {
               <li>
                 <Link href="/projetos" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                   {t('navigation.projects')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                  {t('navigation.blog')}
                 </Link>
               </li>
               <li>

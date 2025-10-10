@@ -97,26 +97,32 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
       <div className="pt-0 pb-2 px-6 md:px-32 space-y-6 md:space-y-12">
         <Inicio aboutMe={aboutMe} />
 
-        {/* Posts Section */}
-        <section className="bg-white dark:bg-gray-800 rounded-lg shadow-lg py-12 px-6 md:px-20 my-16 max-w-6xl mx-auto border border-gray-200 dark:border-gray-700">
-          <h2 className="text-5xl font-bold mb-8 text-center text-gray-900 dark:text-white">{t('home.posts.title')}</h2>
-          <ul className="space-y-6">
-            {allPostsData.map(({ slug, title, date, public: isPublic }) => (
-              <li key={slug} className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300">
-                {!isPublic && !isSignedIn ? (
-                  <div className="text-red-500 dark:text-red-400">
-                    <h3 className="text-3xl font-semibold">{title} ({t('home.project.private')})</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{t('home.project.loginRequired')}</p>
+        {/* Projects Section */}
+        <section className="py-12 px-4 md:px-12 my-16 max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+              <div key={num} className="group">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">{t('projects.projectNumber')} {num}</h4>
+                  {num <= 3 && (
+                    <span className="bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 text-xs font-bold px-3 py-1 rounded-full">{t('projects.featuredBadge')}</span>
+                  )}
+                </div>
+                <div className="aspect-video bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden mb-4">
+                  {/* Placeholder para vídeo */}
+                  <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    <p className="text-sm">{t('projects.projectNumber')} {num} - {t('projects.videoPlaceholder')}</p>
                   </div>
-                ) : (
-                  <Link href={`/posts/${slug}`} className="block">
-                    <h3 className="text-3xl font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200">{title}</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">{isPublic ? `(${t('home.project.public')})` : t('home.project.loginRequiredLabel')}</p>
-                  </Link>
-                )}
-              </li>
+                </div>
+                <Link
+                  href={`/projetos#projeto-${num}`}
+                  className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-200"
+                >
+                  {t('projects.viewDetails')}
+                </Link>
+              </div>
             ))}
-          </ul>
+          </div>
           
           {/* CTA Section */}
           <div className="text-center mt-12">

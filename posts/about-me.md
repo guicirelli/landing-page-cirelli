@@ -1,5 +1,5 @@
 ---
-title: "Projeto Público"
+title: "Sobre Mim"
 date: "2025-01-15"
 author: "Guilherme Cirelli Lopes"
 public: true

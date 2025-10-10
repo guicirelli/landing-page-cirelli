@@ -13,6 +13,7 @@ export const OptimizedImage = ({
   className = '',
   width,
   height,
+  priority = false,
   ...props
 }: OptimizedImageProps) => {
   const [error, setError] = useState(false);
@@ -43,7 +44,8 @@ export const OptimizedImage = ({
         width={width as number}
         height={height as number}
         className={`${className} ${loading ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
-        loading="lazy"
+        loading={priority ? undefined : 'lazy'}
+        priority={priority}
         {...props}
       />
     </div>

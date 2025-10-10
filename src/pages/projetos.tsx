@@ -13,44 +13,146 @@ interface ProjetosProps {
 const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
   const { t } = useLanguage();
   const projetos = [
+    // Top 3
     {
       id: 1,
-      title: "Personal Portfolio",
-      description: "This very portfolio you're seeing! Built with Next.js, TypeScript and Tailwind CSS, featuring light/dark theme system and SEO optimizations.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      image: "https://via.placeholder.com/400x300/3b82f6/ffffff?text=Portfolio",
-      github: "https://github.com/guicirelli/portfolio",
-      demo: "#",
+      title: "Projeto 1",
+      image: "/img/projetos/placeholder.svg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
       featured: true
     },
     {
       id: 2,
-      title: "Management System",
-      description: "Complete business management system with dashboard, reports and inventory control. Modern and responsive interface.",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      image: "https://via.placeholder.com/400x300/10b981/ffffff?text=Management",
-      github: "https://github.com/guicirelli/sistema-gestao",
-      demo: "#",
+      title: "Projeto 2",
+      image: "/img/projetos/projeto-2.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["React", "Node.js", "Express", "MongoDB"],
       featured: true
     },
     {
       id: 3,
-      title: "E-commerce Platform",
-      description: "Complete e-commerce platform with shopping cart, payments and admin panel.",
-      technologies: ["Next.js", "Stripe", "PostgreSQL", "Prisma"],
-      image: "https://via.placeholder.com/400x300/8b5cf6/ffffff?text=E-commerce",
-      github: "https://github.com/guicirelli/ecommerce",
-      demo: "#",
+      title: "Projeto 3",
+      image: "/img/projetos/projeto-3.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["Next.js", "PostgreSQL", "Prisma", "API REST"],
+      featured: true
+    },
+    // Projetos 4-10
+    {
+      id: 4,
+      title: "Projeto 4",
+      image: "/img/projetos/projeto-4.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["Node.js", "Express", "JWT", "Swagger"],
       featured: false
     },
     {
-      id: 4,
-      title: "RESTful API",
-      description: "Robust RESTful API for user and product management, with JWT authentication and Swagger documentation.",
-      technologies: ["Node.js", "Express", "JWT", "Swagger"],
-      image: "https://via.placeholder.com/400x300/f59e0b/ffffff?text=API",
-      github: "https://github.com/guicirelli/api-restful",
-      demo: "#",
+      id: 5,
+      title: "Projeto 5",
+      image: "/img/projetos/projeto-5.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["React", "CSS3", "JavaScript", "HTML5"],
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Projeto 6",
+      image: "/img/projetos/projeto-6.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["Next.js", "API REST", "Tailwind", "TypeScript"],
+      featured: false
+    },
+    {
+      id: 7,
+      title: "Projeto 7",
+      image: "/img/projetos/projeto-7.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["React", "Firebase", "Material UI", "JavaScript"],
+      featured: false
+    },
+    {
+      id: 8,
+      title: "Projeto 8",
+      image: "/img/projetos/projeto-8.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["Node.js", "SQL", "Express", "Bootstrap"],
+      featured: false
+    },
+    {
+      id: 9,
+      title: "Projeto 9",
+      image: "/img/projetos/projeto-9.jpg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["React", "GraphQL", "Apollo", "Styled Components"],
+      featured: false
+    },
+    {
+      id: 10,
+      title: "Projeto 10",
+      image: "/img/projetos/placeholder.svg",
+      link: "#",
+      funcionalidades: [
+        "Funcionalidade 1",
+        "Funcionalidade 2",
+        "Funcionalidade 3",
+        "Funcionalidade 4"
+      ],
+      tecnologias: ["Next.js", "Vercel", "Netlify", "Git"],
       featured: false
     }
   ];
@@ -73,68 +175,92 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
           subtitle={t('projects.subtitle')}
           vPadding="py-20"
         >
-          <div className="col-span-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projetos.map((projeto) => (
-                <div
-                  key={projeto.id}
-                  className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 ${
-                    projeto.featured ? 'ring-2 ring-blue-500' : ''
-                  }`}
-                >
-                  <div className="relative">
-                    <Image
-                      src={projeto.image}
-                      alt={projeto.title}
-                      width={400}
-                      height={192}
-                      className="w-full h-48 object-cover"
-                    />
-                    {projeto.featured && (
-                      <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        {t('projects.featured')}
+          <div className="col-span-full max-w-4xl mx-auto space-y-12">
+            {projetos.map((projeto) => (
+              <div
+                key={projeto.id}
+                id={`projeto-${projeto.id}`}
+                className="scroll-mt-24"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                  {/* Lado Esquerdo - Título e Informações */}
+                  <div>
+                    {/* Título do Projeto */}
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                      {t('projects.projectNumber')} {projeto.id}
+                    </h2>
+
+                    <div className="space-y-6">
+                      {/* Funcionalidades */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                          {t('projects.features')}
+                        </h3>
+                        <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                          {projeto.funcionalidades.map((func, index) => (
+                            <li key={index} className="flex items-start gap-2">
+                              <span className="text-blue-600 dark:text-blue-400">•</span>
+                              {func}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                      {projeto.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                      {projeto.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {projeto.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 text-sm rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+
+                      {/* Tecnologias */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                          {t('projects.technologies')}
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {projeto.tecnologias.map((tech, index) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-md"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex gap-4">
+                  </div>
+
+                  {/* Lado Direito - Link e Imagem */}
+                  <div>
+                    {/* Link do Projeto */}
+                    <div className="mb-4">
                       <a
-                        href={projeto.github}
+                        href={projeto.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gray-900 dark:bg-gray-700 text-white text-center py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200"
+                        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-semibold"
                       >
-                        {t('projects.viewCode')}
+                        {t('projects.accessProject')}
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
                       </a>
-                      <a
-                        href={projeto.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                      >
-                        {t('projects.viewDemo')}
-                      </a>
+                    </div>
+
+                    {/* Imagem do Projeto */}
+                    <div className="rounded-lg overflow-hidden">
+                      <Image
+                        src={projeto.image}
+                        alt={projeto.title}
+                        width={400}
+                        height={200}
+                        className="w-full h-auto object-cover"
+                      />
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Divisor */}
+                {projeto.id < 10 && (
+                  <hr className="mt-12 border-gray-200 dark:border-gray-700" />
+                )}
+              </div>
+            ))}
           </div>
         </PageSection>
 

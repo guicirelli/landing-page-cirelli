@@ -37,7 +37,7 @@
   },
   "about": {
     "title": "About Me",
-    "introduction": "Hello! I'm Guilherme Cirelli Lopes, a Systems Analysis and Development student 💻, known for being hardworking and honorable in keeping my promises. My goal is to help entrepreneurs 💡 and professionals like you transform ideas into successful digital projects 🌟, with scalable, modern and functional solutions.",
+    "introduction": "Hello! I'm Guilherme Cirelli Lopes, a Systems Analysis and Development student, known for being hardworking and honorable in keeping my promises. My goal is to help entrepreneurs and professionals like you transform ideas into successful digital projects, with scalable, modern and functional solutions.",
     "education": {
       "title": "Education",
       "degree": "Undergraduate in Systems Analysis and Development",
@@ -48,7 +48,7 @@
       "area": "Full-Stack Web Development"
     },
     "services": {
-      "title": "💼 What can I do for your project?",
+      "title": "What can I do for your project?",
       "items": [
         "Development of responsive and modern websites that highlight your products or services.",
         "Creation of customized web applications, with integrated Front-End and Back-End.",
@@ -58,11 +58,11 @@
       ]
     },
     "whyChoose": {
-      "title": "🚀 Why choose to work with me?",
+      "title": "Why choose to work with me?",
       "items": [
         "Total commitment: I deliver what I promise, studying and applying effective solutions.",
-        "Quick and constant learning: I'm always updated on the latest technologies 🔍, offering modern and efficient solutions.",
-        "Results-focused: Before coding, I analyze and deeply understand the problem, ensuring the solution meets your exact needs 💡."
+        "Quick and constant learning: I'm always updated on the latest technologies, offering modern and efficient solutions.",
+        "Results-focused: Before coding, I analyze and deeply understand the problem, ensuring the solution meets your exact needs."
       ]
     },
     "skills": {
@@ -81,6 +81,13 @@
     "featured": "Featured",
     "viewCode": "View Code",
     "viewDemo": "View Demo",
+    "viewDetails": "View more details",
+    "accessProject": "Access Project",
+    "features": "Features",
+    "technologies": "Technologies Used",
+    "projectNumber": "Project",
+    "featuredBadge": "FEATURED",
+    "videoPlaceholder": "Video",
     "interested": {
       "title": "Interested in Working Together?",
       "subtitle": "Let's create something amazing together!",
@@ -172,8 +179,14 @@
     }
   },
   "blog": {
-    "title": "📅 Timeline",
+    "title": "Timeline",
     "subtitle": "My journey in programming and development",
+    "exclusive": {
+      "title": "Exclusive Content",
+      "message": "This section is available only for authenticated users. Please log in to access the complete timeline.",
+      "loginButton": "Sign In",
+      "loading": "Loading..."
+    },
     "timeline": [
       {
         "date": "Feb 2024",

@@ -37,7 +37,7 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "introduction": "Olá! Sou Guilherme Cirelli Lopes, estudante de Análise e Desenvolvimento de Sistemas 💻, conhecido por ser esforçado e honrado em cumprir o que prometo. Meu objetivo é ajudar empreendedores 💡 e profissionais como você a transformar ideias em projetos digitais de sucesso 🌟, com soluções escaláveis, modernas e funcionais.",
+    "introduction": "Olá! Sou Guilherme Cirelli Lopes, estudante de Análise e Desenvolvimento de Sistemas, conhecido por ser esforçado e honrado em cumprir o que prometo. Meu objetivo é ajudar empreendedores e profissionais como você a transformar ideias em projetos digitais de sucesso, com soluções escaláveis, modernas e funcionais.",
     "education": {
       "title": "Educação",
       "degree": "Graduando em Análise e Desenvolvimento de Sistemas",
@@ -48,7 +48,7 @@
       "area": "Desenvolvimento Web Full-Stack"
     },
     "services": {
-      "title": "💼 O que posso fazer pelo seu projeto?",
+      "title": "O que posso fazer pelo seu projeto?",
       "items": [
         "Desenvolvimento de sites responsivos e modernos, que destacam seus produtos ou serviços.",
         "Criação de aplicações web personalizadas, com Front-End e Back-End integrados.",
@@ -58,11 +58,11 @@
       ]
     },
     "whyChoose": {
-      "title": "🚀 Por que escolher trabalhar comigo?",
+      "title": "Por que escolher trabalhar comigo?",
       "items": [
         "Comprometimento total: cumpro o que prometo, estudando e aplicando soluções eficazes.",
-        "Aprendizado rápido e constante: estou sempre atualizado nas tecnologias mais recentes 🔍, oferecendo soluções modernas e eficientes.",
-        "Foco em resultados: antes de codificar, analiso e entendo profundamente o problema, garantindo que a solução atenda exatamente às suas necessidades 💡."
+        "Aprendizado rápido e constante: estou sempre atualizado nas tecnologias mais recentes, oferecendo soluções modernas e eficientes.",
+        "Foco em resultados: antes de codificar, analiso e entendo profundamente o problema, garantindo que a solução atenda exatamente às suas necessidades."
       ]
     },
     "skills": {
@@ -81,6 +81,13 @@
     "featured": "Destaque",
     "viewCode": "Ver Código",
     "viewDemo": "Ver Demo",
+    "viewDetails": "Ver mais detalhes",
+    "accessProject": "Acessar Projeto",
+    "features": "Funcionalidades",
+    "technologies": "Tecnologias Utilizadas",
+    "projectNumber": "Projeto",
+    "featuredBadge": "DESTAQUE",
+    "videoPlaceholder": "Vídeo",
     "interested": {
       "title": "Interessado em trabalhar juntos?",
       "subtitle": "Vamos criar algo incrível juntos!",
@@ -172,8 +179,14 @@
     }
   },
   "blog": {
-    "title": "📅 Linha do Tempo",
+    "title": "Linha do Tempo",
     "subtitle": "Minha jornada na programação e desenvolvimento",
+    "exclusive": {
+      "title": "Conteúdo Exclusivo",
+      "message": "Esta seção está disponível apenas para usuários autenticados. Faça login para acessar a linha do tempo completa.",
+      "loginButton": "Fazer Login",
+      "loading": "Carregando..."
+    },
     "timeline": [
       {
         "date": "Fev 2024",

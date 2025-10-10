@@ -1,8 +1,8 @@
 ---
-title: "Projeto Privado"
+title: "Meus Projetos"
 date: "2025-01-15"
 author: "Guilherme Cirelli Lopes"
-public: false
+public: true
 ---
 
 # Projeto Privado

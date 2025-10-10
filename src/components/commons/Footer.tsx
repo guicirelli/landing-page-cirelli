@@ -1,4 +1,5 @@
-import { getBusinessSettings, getGeneralSettings, getLinkTreeData } from '@/lib/settings';
+import React, { useState, useEffect } from 'react';
+import { getGeneralSettings, getLinkTreeData } from '@/lib/settings';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,11 +9,33 @@ interface FooterProps {
 }
 
 export const Footer = ({ className = "" }: FooterProps) => {
-  const { t } = useLanguage();
-  const { language } = useLanguage();
-  const businessSettings = getBusinessSettings();
+  const { t, language } = useLanguage();
+  const [mounted, setMounted] = useState(false);
   const generalSettings = getGeneralSettings();
   const linkTreeData = getLinkTreeData();
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  
+  // Usa a tradução diretamente do contexto ao invés de getBusinessSettings
+  const businessSettings = {
+    brandName: "Guilherme Cirelli Lopes",
+    brandDescription: t('home.subtitle'),
+    brandEmail: "guilopes.030206@gmail.com",
+    brandPhone: "+55 43 99157-5781"
+  };
+  
+  // Previne erro de hidratação renderizando placeholder até montar
+  if (!mounted) {
+    return (
+      <footer className={`bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 ${className}`}>
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <div className="h-64"></div>
+        </div>
+      </footer>
+    );
+  }
 
   const getIcon = (iconName: string) => {
     const icons: { [key: string]: any } = {

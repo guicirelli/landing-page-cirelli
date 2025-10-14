@@ -88,6 +88,10 @@
     "projectNumber": "Project",
     "featuredBadge": "FEATURED",
     "videoPlaceholder": "Video",
+    "like": {
+      "loginRequired": "Sign in to like!",
+      "loginMessage": "Log into your account to save your favorite projects"
+    },
     "interested": {
       "title": "Interested in Working Together?",
       "subtitle": "Let's create something amazing together!",
@@ -186,6 +190,11 @@
       "message": "This section is available only for authenticated users. Please log in to access the complete timeline.",
       "loginButton": "Sign In",
       "loading": "Loading..."
+    },
+    "cta": {
+      "title": "Want to know more about my journey?",
+      "description": "If you identify with my path and are looking for a committed developer, let's talk about how I can contribute to your project!",
+      "button": "Get in Touch"
     },
     "timeline": [
       {

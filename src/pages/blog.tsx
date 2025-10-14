@@ -114,16 +114,16 @@ const Blog = ({ businessSettings, generalSettings }: BlogProps) => {
               {/* Call to Action */}
               <div className="text-center mt-16">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  {t('projects.interested.title')}
+                  {t('blog.cta.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  {t('projects.interested.description')}
+                  {t('blog.cta.description')}
                 </p>
                 <Link
                   href="/contato"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  {t('cta.letsTalk')}
+                  {t('blog.cta.button')}
                 </Link>
               </div>
             </div>

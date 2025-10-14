@@ -94,52 +94,8 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
           }}
         />
       </Head>
-      <div className="pt-0 pb-2 px-6 md:px-32 space-y-6 md:space-y-12">
+      <div className="pt-0 pb-40 md:pb-32 px-6 md:px-32 space-y-6 md:space-y-12">
         <Inicio aboutMe={aboutMe} />
-
-        {/* Projects Section */}
-        <section className="py-12 px-4 md:px-12 my-16 max-w-[1600px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
-              <div key={num} className="group">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">{t('projects.projectNumber')} {num}</h4>
-                  {num <= 3 && (
-                    <span className="bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 text-xs font-bold px-3 py-1 rounded-full">{t('projects.featuredBadge')}</span>
-                  )}
-                </div>
-                <div className="aspect-video bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden mb-4">
-                  {/* Placeholder para vídeo */}
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    <p className="text-sm">{t('projects.projectNumber')} {num} - {t('projects.videoPlaceholder')}</p>
-                  </div>
-                </div>
-                <Link
-                  href={`/projetos#projeto-${num}`}
-                  className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-200"
-                >
-                  {t('projects.viewDetails')}
-                </Link>
-              </div>
-            ))}
-          </div>
-          
-          {/* CTA Section */}
-          <div className="text-center mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('projects.interested.title')}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              {t('projects.interested.description')}
-            </p>
-            <Link
-              href="/contato"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              {t('cta.startProject')}
-            </Link>
-          </div>
-        </section>
       </div>
     </>
   );

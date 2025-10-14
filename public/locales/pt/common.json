@@ -88,6 +88,10 @@
     "projectNumber": "Projeto",
     "featuredBadge": "DESTAQUE",
     "videoPlaceholder": "Vídeo",
+    "like": {
+      "loginRequired": "Faça login para curtir!",
+      "loginMessage": "Entre na sua conta para salvar seus projetos favoritos"
+    },
     "interested": {
       "title": "Interessado em trabalhar juntos?",
       "subtitle": "Vamos criar algo incrível juntos!",
@@ -186,6 +190,11 @@
       "message": "Esta seção está disponível apenas para usuários autenticados. Faça login para acessar a linha do tempo completa.",
       "loginButton": "Fazer Login",
       "loading": "Carregando..."
+    },
+    "cta": {
+      "title": "Quer saber mais sobre minha trajetória?",
+      "description": "Se você se identifica com minha jornada e busca um desenvolvedor comprometido, vamos conversar sobre como posso contribuir com seu projeto!",
+      "button": "Entrar em Contato"
     },
     "timeline": [
       {

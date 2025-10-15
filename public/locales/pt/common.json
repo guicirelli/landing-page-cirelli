@@ -9,8 +9,90 @@
   "home": {
     "title": "Prazer, eu sou",
     "titleBold": "Guilherme",
-    "subtitle": "Desenvolvedor web apaixonado por criar soluções eficientes e práticas.",
+    "subtitle": "Desenvolvedor Full Stack que transforma ideias em soluções digitais funcionais",
     "whatsapp": "WhatsApp",
+    "hero": {
+      "experience": "anos de experiência"
+    },
+    "stats": {
+      "title": "Números que falam por si",
+      "projects": "Projetos Entregues",
+      "experience": "Anos de Experiência",
+      "technologies": "Tecnologias Dominadas",
+      "response": "Resposta"
+    },
+    "about": {
+      "title": "Quem sou eu?",
+      "description": "Estudante de ADS, conhecido por ser esforçado e comprometido. Transformo problemas em código limpo e funcional.",
+      "cta": "Conheça Minha História"
+    },
+    "services": {
+      "title": "Como posso ajudar seu projeto?",
+      "subtitle": "Soluções completas em desenvolvimento web",
+      "fullstack": {
+        "title": "Desenvolvimento Full Stack",
+        "description": "Aplicações completas com front-end e back-end integrados"
+      },
+      "frontend": {
+        "title": "Interfaces Responsivas",
+        "description": "Interfaces modernas que funcionam perfeitamente em qualquer dispositivo"
+      },
+      "deploy": {
+        "title": "Deploy & Otimização",
+        "description": "Publicação e otimização em plataformas modernas"
+      },
+      "viewAll": "Ver Todos os Serviços"
+    },
+    "whyMe": {
+      "title": "Por que me escolher?",
+      "subtitle": "Meus diferenciais",
+      "commitment": {
+        "title": "Comprometimento total",
+        "description": "Cumpro o que prometo, sempre buscando a melhor solução"
+      },
+      "learning": {
+        "title": "Aprendizado constante",
+        "description": "Sempre atualizado com as mais novas tecnologias"
+      },
+      "results": {
+        "title": "Foco em resultados",
+        "description": "Analiso profundamente antes de codificar"
+      }
+    },
+    "projects": {
+      "title": "Projetos em Destaque",
+      "subtitle": "Alguns dos meus melhores trabalhos",
+      "project1": "Sistema completo com Next.js e TypeScript",
+      "project2": "Aplicação web com React e Node.js",
+      "project3": "API REST com PostgreSQL",
+      "viewAll": "Ver Todos os Projetos"
+    },
+    "techStack": {
+      "title": "Tecnologias que domino",
+      "subtitle": "Stack moderna e atualizada"
+    },
+    "timeline": {
+      "title": "Minha Jornada",
+      "subtitle": "De onde vim e para onde vou",
+      "item1": {
+        "date": "Fev 2024",
+        "title": "Início em ADS"
+      },
+      "item2": {
+        "date": "Jan 2025",
+        "title": "A.Yoshii Engenharia"
+      },
+      "item3": {
+        "date": "Jul 2025",
+        "title": "Mentoria Especializada"
+      },
+      "viewAll": "Ver Linha do Tempo Completa"
+    },
+    "cta": {
+      "title": "Pronto para tirar seu projeto do papel?",
+      "description": "Vamos conversar sobre como posso contribuir com soluções eficientes e modernas para transformar sua ideia em realidade!",
+      "button": "Entrar em Contato Agora"
+    },
     "posts": {
       "title": "Meus Projetos"
     },
@@ -104,7 +186,7 @@
     "subtitle": "Vamos conversar sobre seu próximo projeto ou oportunidade de trabalho",
     "letsTalk": "Vamos Conversar!",
     "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!",
-    "email": "Email",
+    "email": "guilopes.030206@gmail.com",
     "phone": "Telefone",
     "location": "Localização",
     "locationText": "Londrina, PR - Brasil",

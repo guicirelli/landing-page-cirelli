@@ -1,0 +1,30 @@
+{
+  "titleEmoji": "",
+  "projects": [
+    {
+      "id": 1,
+      "titleKey": "projects.projectNumber",
+      "descriptionKey": "home.projects.project1",
+      "techs": ["Next.js", "TypeScript", "Tailwind"],
+      "featured": true,
+      "link": "/projetos"
+    },
+    {
+      "id": 2,
+      "titleKey": "projects.projectNumber",
+      "descriptionKey": "home.projects.project2",
+      "techs": ["React", "Node.js", "MongoDB"],
+      "featured": true,
+      "link": "/projetos"
+    },
+    {
+      "id": 3,
+      "titleKey": "projects.projectNumber",
+      "descriptionKey": "home.projects.project3",
+      "techs": ["Next.js", "PostgreSQL", "API REST"],
+      "featured": true,
+      "link": "/projetos"
+    }
+  ]
+}
+

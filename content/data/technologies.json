@@ -1,0 +1,66 @@
+{
+  "titleEmoji": "",
+  "technologies": [
+    {
+      "id": "nextjs",
+      "nameKey": "home.technologies.nextjs",
+      "color": "bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg"
+    },
+    {
+      "id": "react",
+      "nameKey": "home.technologies.react",
+      "color": "bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg"
+    },
+    {
+      "id": "javascript",
+      "nameKey": "home.technologies.javascript",
+      "color": "bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-lg"
+    },
+    {
+      "id": "nodejs",
+      "nameKey": "home.technologies.nodejs",
+      "color": "bg-gradient-to-br from-blue-400 to-blue-500 text-white shadow-lg"
+    },
+    {
+      "id": "express",
+      "nameKey": "home.technologies.express",
+      "color": "bg-gradient-to-br from-blue-500 to-blue-400 text-white shadow-lg"
+    },
+    {
+      "id": "apis",
+      "nameKey": "home.technologies.apis",
+      "color": "bg-gradient-to-br from-blue-600 to-blue-500 text-white shadow-lg"
+    },
+    {
+      "id": "html5",
+      "nameKey": "home.technologies.html5",
+      "color": "bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg"
+    },
+    {
+      "id": "css3",
+      "nameKey": "home.technologies.css3",
+      "color": "bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-lg"
+    },
+    {
+      "id": "sql",
+      "nameKey": "home.technologies.sql",
+      "color": "bg-gradient-to-br from-blue-400 to-blue-500 text-white shadow-lg"
+    },
+    {
+      "id": "github",
+      "nameKey": "home.technologies.github",
+      "color": "bg-gradient-to-br from-blue-500 to-blue-400 text-white shadow-lg"
+    },
+    {
+      "id": "netlify",
+      "nameKey": "home.technologies.netlify",
+      "color": "bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg"
+    },
+    {
+      "id": "trello",
+      "nameKey": "home.technologies.trello",
+      "color": "bg-gradient-to-br from-blue-400 to-blue-500 text-white shadow-lg"
+    }
+  ]
+}
+

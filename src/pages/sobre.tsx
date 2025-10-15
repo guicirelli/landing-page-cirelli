@@ -35,20 +35,20 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
           <div className="col-span-full">
             <div className="prose prose-lg max-w-none mx-auto">
               {/* Education and Specialization blocks */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                     {t('about.education.title')}
                   </h3>
-                  <p className="text-blue-800 dark:text-blue-200">
+                  <p className="text-gray-700 dark:text-gray-300 text-lg">
                     {t('about.education.degree')}
                   </p>
                 </div>
-                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-green-900 dark:text-green-100 mb-3">
+                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                     {t('about.specialization.title')}
                   </h3>
-                  <p className="text-green-800 dark:text-green-200">
+                  <p className="text-gray-700 dark:text-gray-300 text-lg">
                     {t('about.specialization.area')}
                   </p>
                 </div>

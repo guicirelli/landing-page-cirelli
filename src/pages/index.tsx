@@ -1,10 +1,17 @@
 import { Inicio } from '@/components/Home/Inicio';
+import { StatsSection } from '@/components/Home/StatsSection';
+import { AboutSection } from '@/components/Home/AboutSection';
+import { ServicesSection } from '@/components/Home/ServicesSection';
+import { WhyMeSection } from '@/components/Home/WhyMeSection';
+import { FeaturedProjects } from '@/components/Home/FeaturedProjects';
+import { TechStack } from '@/components/Home/TechStack';
+import { TimelineSection } from '@/components/Home/TimelineSection';
+import { CTASection } from '@/components/Home/CTASection';
 import { Project, AboutMe as TAboutMe } from '@/types/Home';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Link from 'next/link'; // Importar Link
-import { getSortedPostsData, PostData } from '@/lib/posts'; // Importar funções de posts
-import { useUser } from "@clerk/nextjs"; // Importar useUser
+import { getSortedPostsData, PostData } from '@/lib/posts';
+import { useUser } from "@clerk/nextjs";
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getBusinessSettings, getGeneralSettings } from '@/lib/settings';
 
@@ -94,8 +101,35 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
           }}
         />
       </Head>
-      <div className="pt-0 pb-40 md:pb-32 px-6 md:px-32 space-y-6 md:space-y-12">
-        <Inicio aboutMe={aboutMe} />
+      <div className="w-full">
+        {/* Hero Section */}
+        <div className="px-6 md:px-12">
+          <Inicio />
+        </div>
+
+        {/* Stats Section */}
+        <StatsSection />
+
+        {/* About Section */}
+        <AboutSection />
+
+        {/* Services Section */}
+        <ServicesSection />
+
+        {/* Why Me Section */}
+        <WhyMeSection />
+
+        {/* Featured Projects */}
+        <FeaturedProjects />
+
+        {/* Tech Stack */}
+        <TechStack />
+
+        {/* Timeline Section */}
+        <TimelineSection />
+
+        {/* CTA Final */}
+        <CTASection />
       </div>
     </>
   );

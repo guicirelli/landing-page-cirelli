@@ -9,8 +9,90 @@
   "home": {
     "title": "Pleasure, I am",
     "titleBold": "Guilherme",
-    "subtitle": "Web developer passionate about delivering efficient and practical solutions.",
+    "subtitle": "Full Stack Developer who transforms ideas into functional digital solutions",
     "whatsapp": "WhatsApp",
+    "hero": {
+      "experience": "years of experience"
+    },
+    "stats": {
+      "title": "Numbers that speak for themselves",
+      "projects": "Projects Delivered",
+      "experience": "Years of Experience",
+      "technologies": "Technologies Mastered",
+      "response": "Response"
+    },
+    "about": {
+      "title": "Who am I?",
+      "description": "ADS student, known for being hardworking and committed. I transform problems into clean and functional code.",
+      "cta": "Learn About My Story"
+    },
+    "services": {
+      "title": "How can I help your project?",
+      "subtitle": "Complete web development solutions",
+      "fullstack": {
+        "title": "Full Stack Development",
+        "description": "Complete applications with integrated front-end and back-end"
+      },
+      "frontend": {
+        "title": "Responsive Interfaces",
+        "description": "Modern interfaces that work perfectly on any device"
+      },
+      "deploy": {
+        "title": "Deploy & Optimization",
+        "description": "Publishing and optimization on modern platforms"
+      },
+      "viewAll": "View All Services"
+    },
+    "whyMe": {
+      "title": "Why choose me?",
+      "subtitle": "My differentials",
+      "commitment": {
+        "title": "Total commitment",
+        "description": "I deliver what I promise, always seeking the best solution"
+      },
+      "learning": {
+        "title": "Constant learning",
+        "description": "Always updated with the newest technologies"
+      },
+      "results": {
+        "title": "Focus on results",
+        "description": "I analyze deeply before coding"
+      }
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "Some of my best work",
+      "project1": "Complete system with Next.js and TypeScript",
+      "project2": "Web application with React and Node.js",
+      "project3": "REST API with PostgreSQL",
+      "viewAll": "View All Projects"
+    },
+    "techStack": {
+      "title": "Technologies I master",
+      "subtitle": "Modern and up-to-date stack"
+    },
+    "timeline": {
+      "title": "My Journey",
+      "subtitle": "Where I came from and where I'm going",
+      "item1": {
+        "date": "Feb 2024",
+        "title": "Starting in ADS"
+      },
+      "item2": {
+        "date": "Jan 2025",
+        "title": "A.Yoshii Engenharia"
+      },
+      "item3": {
+        "date": "Jul 2025",
+        "title": "Specialized Mentorship"
+      },
+      "viewAll": "View Complete Timeline"
+    },
+    "cta": {
+      "title": "Ready to bring your project to life?",
+      "description": "Let's talk about how I can contribute with efficient and modern solutions to transform your idea into reality!",
+      "button": "Get in Touch Now"
+    },
     "posts": {
       "title": "My Projects"
     },
@@ -26,7 +108,7 @@
       "javascript": "JavaScript",
       "nodejs": "Node.js",
       "express": "Express",
-      "apis": "APIs REST",
+      "apis": "REST APIs",
       "html5": "HTML5",
       "css3": "CSS3",
       "sql": "SQL",
@@ -104,7 +186,7 @@
     "subtitle": "Let's talk about your next project or job opportunity",
     "letsTalk": "Let's Talk!",
     "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!",
-    "email": "Email",
+    "email": "guilopes.030206@gmail.com",
     "phone": "Phone",
     "location": "Location",
     "locationText": "Londrina, PR - Brazil",

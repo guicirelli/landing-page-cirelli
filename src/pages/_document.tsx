@@ -23,6 +23,14 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
       <body className="bg-white dark:bg-gray-900">
+        {/* Formulário estático oculto para Netlify Forms detectar durante o build */}
+        <form name="contato" method="POST" data-netlify="true" hidden>
+          <input type="hidden" name="form-name" value="contato" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
+        
         <Main />
         <NextScript />
       </body>

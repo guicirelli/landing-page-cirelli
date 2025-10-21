@@ -6,7 +6,7 @@ import heroData from '../../../content/data/hero.json';
 
 export const Inicio = () => {
   const { t } = useLanguage();
-  const { badge, experienceBadge, photo } = heroData.hero;
+  const { badge, photo } = heroData.hero;
 
   return (
     <section className="min-h-[90vh] flex items-center py-12">
@@ -56,20 +56,14 @@ export const Inicio = () => {
 
           {/* Right Content - Photo */}
           <div className="relative flex-shrink-0">
-            <div className="relative">
-              <OptimizedImage
-                src={photo.url}
-                alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
-                className="rounded-full shadow-2xl ring-8 ring-blue-100 dark:ring-blue-900"
-                priority
-              />
-              <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-2xl shadow-xl">
-                <p className="text-3xl font-bold">{experienceBadge.number}</p>
-                <p className="text-xs">{t(experienceBadge.textKey)}</p>
-              </div>
-            </div>
+            <OptimizedImage
+              src={photo.url}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              className="rounded-full shadow-2xl ring-8 ring-blue-100 dark:ring-blue-900"
+              priority
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { Inicio } from '@/components/Home/Inicio';
-import { StatsSection } from '@/components/Home/StatsSection';
 import { AboutSection } from '@/components/Home/AboutSection';
 import { ServicesSection } from '@/components/Home/ServicesSection';
 import { WhyMeSection } from '@/components/Home/WhyMeSection';
@@ -106,9 +105,6 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
         <div className="px-6 md:px-12">
           <Inicio />
         </div>
-
-        {/* Stats Section */}
-        <StatsSection />
 
         {/* About Section */}
         <AboutSection />

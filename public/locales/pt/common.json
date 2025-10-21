@@ -201,8 +201,6 @@
     "name": "Nome",
     "namePlaceholder": "Seu nome completo",
     "emailPlaceholder": "seu@email.com",
-    "subject": "Assunto",
-    "subjectPlaceholder": "Qual é o assunto?",
     "message": "Mensagem",
     "messagePlaceholder": "Conte-me sobre seu projeto ou oportunidade...",
     "sendButton": "Enviar Mensagem",
@@ -220,11 +218,9 @@
       "nameRequired": "Nome é obrigatório",
       "emailRequired": "Email é obrigatório",
       "emailInvalid": "Email inválido",
-      "subjectRequired": "Assunto é obrigatório",
       "messageRequired": "Mensagem é obrigatória",
       "messageTooShort": "Mensagem deve ter pelo menos 10 caracteres"
     },
-    "sending": "Enviando...",
     "success": {
       "title": "Mensagem Enviada!",
       "message": "Obrigado pelo seu contato! Responderei em breve.",

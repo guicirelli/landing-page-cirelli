@@ -201,8 +201,6 @@
     "name": "Name",
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "your@email.com",
-    "subject": "Subject",
-    "subjectPlaceholder": "What's the subject?",
     "message": "Message",
     "messagePlaceholder": "Tell me about your project or opportunity...",
     "sendButton": "Send Message",
@@ -220,11 +218,9 @@
       "nameRequired": "Name is required",
       "emailRequired": "Email is required",
       "emailInvalid": "Invalid email",
-      "subjectRequired": "Subject is required",
       "messageRequired": "Message is required",
       "messageTooShort": "Message must be at least 10 characters"
     },
-    "sending": "Sending...",
     "success": {
       "title": "Message Sent!",
       "message": "Thank you for your contact! I'll respond soon.",

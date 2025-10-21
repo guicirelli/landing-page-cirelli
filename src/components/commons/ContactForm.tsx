@@ -5,14 +5,12 @@ import { useLanguage } from '@/contexts/LanguageContext';
 interface FormData {
   name: string;
   email: string;
-  subject: string;
   message: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
-  subject?: string;
   message?: string;
 }
 
@@ -21,11 +19,9 @@ export const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validateForm = (): boolean => {
@@ -39,10 +35,6 @@ export const ContactForm = () => {
       newErrors.email = t('contact.errors.emailRequired') || 'Email é obrigatório';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = t('contact.errors.emailInvalid') || 'Email inválido';
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = t('contact.errors.subjectRequired') || 'Assunto é obrigatório';
     }
 
     if (!formData.message.trim()) {
@@ -65,26 +57,18 @@ export const ContactForm = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+  const handleSubmit = (e: React.FormEvent) => {
     if (!validateForm()) {
+      e.preventDefault();
       return;
     }
 
-    setIsSubmitting(true);
-    
-    try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+    // Form will be submitted to Netlify Forms
+    // Show success message after a short delay
+    setTimeout(() => {
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      setFormData({ name: '', email: '', message: '' });
+    }, 1000);
   };
 
   if (isSubmitted) {
@@ -118,7 +102,17 @@ export const ContactForm = () => {
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
         {t('contact.sendMessage')}
       </h3>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form 
+        name="contato"
+        method="POST"
+        data-netlify="true"
+        onSubmit={handleSubmit} 
+        className="space-y-6"
+      >
+        {/* Campo oculto para Netlify identificar o formulário */}
+        <input type="hidden" name="form-name" value="contato" />
+
+        {/* Campo Nome */}
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('contact.name')} <span className="text-red-500">*</span>
@@ -133,12 +127,14 @@ export const ContactForm = () => {
               errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder={t('contact.namePlaceholder')}
+            required
           />
           {errors.name && (
             <p className="mt-1 text-sm text-red-500">{errors.name}</p>
           )}
         </div>
 
+        {/* Campo E-mail */}
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('contact.email')} <span className="text-red-500">*</span>
@@ -153,32 +149,14 @@ export const ContactForm = () => {
               errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder={t('contact.emailPlaceholder')}
+            required
           />
           {errors.email && (
             <p className="mt-1 text-sm text-red-500">{errors.email}</p>
           )}
         </div>
 
-        <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            {t('contact.subject')} <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleInputChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 ${
-              errors.subject ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-            }`}
-            placeholder={t('contact.subjectPlaceholder')}
-          />
-          {errors.subject && (
-            <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
-          )}
-        </div>
-
+        {/* Campo Mensagem */}
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('contact.message')} <span className="text-red-500">*</span>
@@ -193,28 +171,19 @@ export const ContactForm = () => {
               errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder={t('contact.messagePlaceholder')}
+            required
           />
           {errors.message && (
             <p className="mt-1 text-sm text-red-500">{errors.message}</p>
           )}
         </div>
 
+        {/* Botão de Enviar */}
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
         >
-          {isSubmitting ? (
-            <span className="flex items-center justify-center">
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              {t('contact.sending') || 'Enviando...'}
-            </span>
-          ) : (
-            t('contact.sendButton')
-          )}
+          {t('contact.sendButton')}
         </button>
       </form>
     </div>

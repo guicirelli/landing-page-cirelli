@@ -28,20 +28,27 @@ export const ContactForm = () => {
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
+    // Validação do Nome
     if (!formData.name.trim()) {
       newErrors.name = t('contact.errors.nameRequired') || 'Nome é obrigatório';
+    } else if (/\d/.test(formData.name)) {
+      newErrors.name = t('contact.errors.nameWithNumbers') || 'Nome não pode conter números';
+    } else if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(formData.name)) {
+      newErrors.name = t('contact.errors.nameInvalidChars') || 'Nome contém caracteres inválidos';
     }
 
+    // Validação do Email
     if (!formData.email.trim()) {
       newErrors.email = t('contact.errors.emailRequired') || 'Email é obrigatório';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = t('contact.errors.emailInvalid') || 'Email inválido';
     }
 
+    // Validação da Mensagem
     if (!formData.message.trim()) {
       newErrors.message = t('contact.errors.messageRequired') || 'Mensagem é obrigatória';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = t('contact.errors.messageTooShort') || 'Mensagem deve ter pelo menos 10 caracteres';
+    } else if (formData.message.trim().length > 500) {
+      newErrors.message = t('contact.errors.messageTooLong') || 'Mensagem muito longa (máximo 500 caracteres)';
     }
 
     setErrors(newErrors);
@@ -52,8 +59,20 @@ export const ContactForm = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
-    if (errors[name as keyof FormErrors]) {
+    // Validar email em tempo real
+    if (name === 'email' && value.length > 0) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        setErrors(prev => ({ ...prev, email: t('contact.errors.emailInvalid') || 'Email inválido' }));
+      } else {
+        setErrors(prev => ({ ...prev, email: undefined }));
+      }
+    } else if (name === 'email' && value.length === 0) {
+      // Limpar erro quando campo estiver vazio
+      setErrors(prev => ({ ...prev, email: undefined }));
+    }
+    
+    // Clear error when user starts typing (outros campos)
+    if (name !== 'email' && errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };

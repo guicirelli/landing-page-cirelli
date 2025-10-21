@@ -186,7 +186,7 @@
     "subtitle": "Vamos conversar sobre seu próximo projeto ou oportunidade de trabalho",
     "letsTalk": "Vamos Conversar!",
     "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!",
-    "email": "guilopes.030206@gmail.com",
+    "email": "E-mail",
     "phone": "Telefone",
     "location": "Localização",
     "locationText": "Londrina, PR - Brasil",
@@ -216,10 +216,12 @@
     },
     "errors": {
       "nameRequired": "Nome é obrigatório",
+      "nameWithNumbers": "Nome não pode conter números",
+      "nameInvalidChars": "Nome contém caracteres inválidos",
       "emailRequired": "Email é obrigatório",
       "emailInvalid": "Email inválido",
       "messageRequired": "Mensagem é obrigatória",
-      "messageTooShort": "Mensagem deve ter pelo menos 10 caracteres"
+      "messageTooLong": "Mensagem muito longa (máximo 500 caracteres)"
     },
     "success": {
       "title": "Mensagem Enviada!",

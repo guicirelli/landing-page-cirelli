@@ -55,13 +55,13 @@ export const Inicio = () => {
           </div>
 
           {/* Right Content - Photo */}
-          <div className="relative flex-shrink-0">
+          <div className="relative flex-shrink-0 w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[400px] mx-auto lg:mx-0">
             <OptimizedImage
               src={photo.url}
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
-              className="rounded-full shadow-2xl ring-8 ring-blue-100 dark:ring-blue-900"
+              className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 w-full h-auto"
               priority
             />
           </div>

@@ -9,11 +9,25 @@ export const Inicio = () => {
   const { badge, photo } = heroData.hero;
 
   return (
-    <section className="min-h-[90vh] flex items-center py-12">
-      <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="flex flex-wrap-reverse lg:flex-nowrap justify-center items-center gap-12 lg:gap-20">
-          {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left">
+    <section className="min-h-[90vh] flex items-center py-12 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
+          {/* Photo - First on mobile */}
+          <div className="flex justify-center w-full lg:order-2 lg:w-auto">
+            <div className="relative w-[280px] sm:w-[320px] lg:w-[400px]">
+              <OptimizedImage
+                src={photo.url}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Content - Second on mobile */}
+          <div className="flex-1 text-center lg:text-left lg:order-1">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               <span className="block text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl font-medium mb-2">
                 {t('home.title')}
@@ -52,18 +66,6 @@ export const Inicio = () => {
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Right Content - Photo */}
-          <div className="relative flex-shrink-0 w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[400px] mx-auto lg:mx-0">
-            <OptimizedImage
-              src={photo.url}
-              alt={photo.alt}
-              width={photo.width}
-              height={photo.height}
-              className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 w-full h-auto"
-              priority
-            />
           </div>
         </div>
       </div>

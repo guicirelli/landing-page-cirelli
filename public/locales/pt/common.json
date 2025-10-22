@@ -28,18 +28,18 @@
     },
     "services": {
       "title": "Como posso ajudar seu projeto?",
-      "subtitle": "Soluções completas em desenvolvimento web",
+      "subtitle": "Desenvolvimento web completo com foco em resultados e qualidade de código",
       "fullstack": {
         "title": "Desenvolvimento Full Stack",
-        "description": "Aplicações completas com front-end e back-end integrados"
+        "description": "Construo aplicações web robustas e escaláveis do zero, integrando front-end moderno com APIs eficientes. Arquitetura pensada para crescer junto com seu negócio."
       },
       "frontend": {
-        "title": "Interfaces Responsivas",
-        "description": "Interfaces modernas que funcionam perfeitamente em qualquer dispositivo"
+        "title": "Interfaces Modernas",
+        "description": "Crio experiências de usuário intuitivas e responsivas que funcionam perfeitamente em qualquer dispositivo. Performance otimizada para carregamento instantâneo."
       },
       "deploy": {
-        "title": "Deploy & Otimização",
-        "description": "Publicação e otimização em plataformas modernas"
+        "title": "Deploy & Infraestrutura",
+        "description": "Configuro e otimizo toda a infraestrutura para produção. Seu projeto no ar, rápido e seguro. Monitoramento ativo e atualizações contínuas."
       },
       "viewAll": "Ver Todos os Serviços"
     },
@@ -69,7 +69,7 @@
     },
     "techStack": {
       "title": "Tecnologias que domino",
-      "subtitle": "Stack moderna e atualizada"
+      "subtitle": "Sempre aprendendo e evoluindo com as melhores ferramentas do mercado"
     },
     "timeline": {
       "title": "Minha Jornada",
@@ -248,6 +248,11 @@
     "hireMe": "Contratar Agora",
     "contactNow": "Fale Comigo",
     "startProject": "Iniciar Projeto"
+  },
+  "floatingButton": {
+    "contactMe": "Fale Comigo",
+    "openMenu": "Abrir menu de contato",
+    "closeMenu": "Fechar menu de contato"
   },
   "socialProof": {
     "title": "Por que me escolher?",

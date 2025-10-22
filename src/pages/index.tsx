@@ -1,7 +1,6 @@
 import { Inicio } from '@/components/Home/Inicio';
 import { AboutSection } from '@/components/Home/AboutSection';
 import { ServicesSection } from '@/components/Home/ServicesSection';
-import { WhyMeSection } from '@/components/Home/WhyMeSection';
 import { FeaturedProjects } from '@/components/Home/FeaturedProjects';
 import { TechStack } from '@/components/Home/TechStack';
 import { TimelineSection } from '@/components/Home/TimelineSection';
@@ -106,14 +105,11 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
           <Inicio />
         </div>
 
-        {/* About Section */}
-        <AboutSection />
-
         {/* Services Section */}
         <ServicesSection />
 
-        {/* Why Me Section */}
-        <WhyMeSection />
+        {/* About Section */}
+        <AboutSection />
 
         {/* Featured Projects */}
         <FeaturedProjects />

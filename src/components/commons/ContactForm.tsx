@@ -87,8 +87,8 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Enviar dados para Netlify Forms
-      const response = await fetch('/', {
+      // 1. Enviar dados para Netlify Forms (notificação por email)
+      const netlifyResponse = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
@@ -99,7 +99,25 @@ export const ContactForm = () => {
         }).toString()
       });
 
-      if (response.ok) {
+      // 2. Adicionar contato ao Mailchimp (executar em paralelo, não bloquear o envio)
+      fetch('/.netlify/functions/mailchimp-subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('✅ Mailchimp:', data.status || 'success');
+        })
+        .catch(error => {
+          console.warn('⚠️ Mailchimp falhou (não-crítico):', error);
+        });
+
+      if (netlifyResponse.ok) {
         setIsSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
       } else {

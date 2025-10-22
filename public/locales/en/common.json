@@ -28,18 +28,18 @@
     },
     "services": {
       "title": "How can I help your project?",
-      "subtitle": "Complete web development solutions",
+      "subtitle": "Complete web development focused on results and code quality",
       "fullstack": {
         "title": "Full Stack Development",
-        "description": "Complete applications with integrated front-end and back-end"
+        "description": "I build robust and scalable web applications from scratch, integrating modern front-end with efficient APIs. Architecture designed to grow with your business."
       },
       "frontend": {
-        "title": "Responsive Interfaces",
-        "description": "Modern interfaces that work perfectly on any device"
+        "title": "Modern Interfaces",
+        "description": "I create intuitive and responsive user experiences that work flawlessly on any device. Optimized performance for instant loading."
       },
       "deploy": {
-        "title": "Deploy & Optimization",
-        "description": "Publishing and optimization on modern platforms"
+        "title": "Deploy & Infrastructure",
+        "description": "I configure and optimize the entire production infrastructure. Your project online, fast and secure. Active monitoring and continuous updates."
       },
       "viewAll": "View All Services"
     },
@@ -69,7 +69,7 @@
     },
     "techStack": {
       "title": "Technologies I master",
-      "subtitle": "Modern and up-to-date stack"
+      "subtitle": "Always learning and evolving with the best tools in the market"
     },
     "timeline": {
       "title": "My Journey",
@@ -248,6 +248,11 @@
     "hireMe": "Hire Me",
     "contactNow": "Contact Now",
     "startProject": "Start Project"
+  },
+  "floatingButton": {
+    "contactMe": "Contact Me",
+    "openMenu": "Open contact menu",
+    "closeMenu": "Close contact menu"
   },
   "socialProof": {
     "title": "Why choose me?",

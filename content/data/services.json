@@ -19,7 +19,7 @@
       "icon": "",
       "titleKey": "home.services.deploy.title",
       "descriptionKey": "home.services.deploy.description",
-      "techs": ["Netlify", "Vercel", "Git", "CI/CD"]
+      "techs": ["Netlify", "Vercel", "Git"]
     }
   ]
 }

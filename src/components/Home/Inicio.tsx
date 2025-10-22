@@ -14,13 +14,13 @@ export const Inicio = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
           {/* Photo - First on mobile */}
           <div className="flex justify-center w-full lg:order-2 lg:w-auto">
-            <div className="relative w-[280px] sm:w-[320px] lg:w-[400px]">
+            <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[400px] lg:h-[400px]">
               <OptimizedImage
                 src={photo.url}
                 alt={photo.alt}
                 width={photo.width}
                 height={photo.height}
-                className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 w-full h-auto"
+                className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 w-full h-full object-cover"
                 priority
               />
             </div>

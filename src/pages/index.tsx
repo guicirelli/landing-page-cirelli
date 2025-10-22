@@ -101,9 +101,7 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
       </Head>
       <div className="w-full">
         {/* Hero Section */}
-        <div className="px-6 md:px-12">
-          <Inicio />
-        </div>
+        <Inicio />
 
         {/* Services Section */}
         <ServicesSection />

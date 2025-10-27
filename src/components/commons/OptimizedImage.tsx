@@ -35,14 +35,13 @@ export const OptimizedImage = ({
 
   return (
     <div 
-      className={`relative ${loading ? 'animate-pulse bg-gray-200 dark:bg-gray-700' : ''}`}
-      style={{ width, height }}
+      className={`relative w-full h-full ${loading ? 'animate-pulse bg-gray-200 dark:bg-gray-700' : ''}`}
+      style={{ width: '100%', height: '100%' }}
     >
       <Image
         src={error ? fallback : imgSrc}
         alt={alt}
-        width={width as number}
-        height={height as number}
+        fill
         className={`${className} ${loading ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
         loading={priority ? undefined : 'lazy'}
         priority={priority}

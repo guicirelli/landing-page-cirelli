@@ -9,20 +9,22 @@ export const Inicio = () => {
   const { badge, photo } = heroData.hero;
 
   return (
-    <section className="flex py-12 overflow-x-hidden lg:items-center lg:min-h-[90vh]">
+    <section className="flex py-12 overflow-hidden lg:items-center lg:min-h-[90vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20 py-8 lg:py-0">
+        <div className="flex flex-col lg:flex-row justify-center items-start lg:items-center gap-6 lg:gap-20 py-8 lg:py-0">
           {/* Photo - First on mobile and desktop */}
-          <div className="flex w-full justify-center lg:w-auto lg:order-2 mb-4">
-            <div className="relative w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] lg:w-[400px] lg:h-[400px]">
-              <OptimizedImage
-                src={photo.url}
-                alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
-                className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 w-full h-full object-cover"
-                priority
-              />
+          <div className="w-full flex justify-center mb-6 lg:w-auto lg:order-2 lg:mb-0">
+            <div className="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] lg:w-[400px] lg:h-[400px]">
+              <div className="w-full h-full relative">
+                <OptimizedImage
+                  src={photo.url}
+                  alt={photo.alt}
+                  width={180}
+                  height={180}
+                  className="rounded-full shadow-2xl ring-4 sm:ring-8 ring-blue-100 dark:ring-blue-900 object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
 

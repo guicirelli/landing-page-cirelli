@@ -11,8 +11,8 @@ export const Inicio = () => {
   return (
     <section className="flex py-12 overflow-x-hidden lg:items-center lg:min-h-[90vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-        <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-8 lg:gap-20 py-8 lg:py-0">
-          {/* Photo - Second on mobile, First on desktop */}
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20 py-8 lg:py-0">
+          {/* Photo - First on mobile and desktop */}
           <div className="flex w-full justify-center lg:w-auto lg:order-2 mb-4">
             <div className="relative w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] lg:w-[400px] lg:h-[400px]">
               <OptimizedImage
@@ -26,7 +26,7 @@ export const Inicio = () => {
             </div>
           </div>
 
-          {/* Content - First on mobile */}
+          {/* Content - Second on mobile */}
           <div className="flex-1 text-center lg:text-left lg:order-1">
             <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight">
               <span className="block text-gray-600 dark:text-gray-300 text-xl sm:text-3xl font-medium mb-1 sm:mb-2">

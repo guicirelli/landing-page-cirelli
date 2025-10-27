@@ -24,8 +24,8 @@ const generalSettings = {
   "darkModeSwitcher": true,
   "feedbackEmail": "guilopes.030206@gmail.com",
   "publishedDate": "2025-01-15 00:00:00",
-  "i18n": "pt-br",
-  "errorMessage": "Ops... algo deu errado. Tente novamente mais tarde ou entre em contato conosco: guilopes.030206@gmail.com"
+  "i18n": "en",
+  "errorMessage": "Oops... something went wrong. Please try again later or contact us: guilopes.030206@gmail.com"
 };
 
 const themeSettings = {

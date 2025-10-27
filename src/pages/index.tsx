@@ -91,8 +91,8 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
                   "@type": "WebSite",
                   "name": "Portfolio Guilherme Cirelli",
                   "url": generalSettings.siteUrl,
-                  "description": "Portfolio profissional de Guilherme Cirelli, desenvolvedor Full Stack especializado em Next.js, React e Node.js",
-                  "inLanguage": "pt-BR"
+                  "description": "Professional portfolio of Guilherme Cirelli, Full Stack developer specialized in Next.js, React and Node.js",
+                  "inLanguage": "en-US"
                 }
               ]
             })

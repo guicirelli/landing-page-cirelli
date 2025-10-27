@@ -18,7 +18,7 @@ const translations = {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState('pt');
+  const [language, setLanguageState] = useState('en');
 
   useEffect(() => {
     // Carregar idioma do localStorage apenas no cliente

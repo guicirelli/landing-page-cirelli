@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="pt-br">
+    <Html lang="en">
       <Head>
         {/* Metatags essenciais */}
         <meta charSet="utf-8" />
@@ -11,7 +11,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.svg" />
         
         {/* Metatags Open Graph padrão */}
-        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Guilherme Cirelli" />
         

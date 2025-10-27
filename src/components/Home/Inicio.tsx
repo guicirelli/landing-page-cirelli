@@ -13,8 +13,8 @@ export const Inicio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
           {/* Photo - First on mobile */}
-          <div className="flex justify-center w-full lg:order-2 lg:w-auto">
-            <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[400px] lg:h-[400px]">
+          <div className="w-full lg:order-2 lg:w-auto">
+            <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[400px] lg:h-[400px] mx-auto">
               <OptimizedImage
                 src={photo.url}
                 alt={photo.alt}

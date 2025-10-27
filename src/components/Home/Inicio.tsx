@@ -11,10 +11,10 @@ export const Inicio = () => {
   return (
     <section className="min-h-[90vh] flex items-center py-12 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-20">
-          {/* Photo - First on mobile */}
-          <div className="w-full lg:order-2 lg:w-auto">
-            <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[400px] lg:h-[400px] mx-auto">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-8 lg:gap-20">
+          {/* Photo - Second on mobile, First on desktop */}
+          <div className="w-full lg:order-2 lg:w-auto mb-4">
+            <div className="relative w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] lg:w-[400px] lg:h-[400px] mx-auto">
               <OptimizedImage
                 src={photo.url}
                 alt={photo.alt}
@@ -26,10 +26,10 @@ export const Inicio = () => {
             </div>
           </div>
 
-          {/* Content - Second on mobile */}
+          {/* Content - First on mobile */}
           <div className="flex-1 text-center lg:text-left lg:order-1">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              <span className="block text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl font-medium mb-2">
+            <h1 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight">
+              <span className="block text-gray-600 dark:text-gray-300 text-xl sm:text-3xl font-medium mb-1 sm:mb-2">
                 {t('home.title')}
               </span>
               <strong className="text-blue-600 dark:text-blue-400">
@@ -37,7 +37,7 @@ export const Inicio = () => {
               </strong>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               {t('home.subtitle')}
             </p>
 

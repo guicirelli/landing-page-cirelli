@@ -88,11 +88,7 @@ export const ContactForm = () => {
 
     try {
       // 1. Enviar dados para Netlify Forms (notificação por email)
-      const formAction = process.env.NODE_ENV === 'production' 
-        ? 'https://guilherme-cirelli.dev' 
-        : '';
-      
-      const netlifyResponse = await fetch(formAction || '/', {
+      const netlifyResponse = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({

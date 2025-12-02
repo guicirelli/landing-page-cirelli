@@ -56,13 +56,13 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
           vPadding="py-20"
         >
           <div className="col-span-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
               {/* Contact Information */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+                <h2 className="text-2xl xs:text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 md:mb-8">
                   {t('contact.connect.title')}
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-7 md:mb-8 leading-relaxed">
                   {t('contact.connect.description')}
                 </p>
 
@@ -121,11 +121,11 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                 </div>
 
                 {/* Social Media */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                <div className="mt-6 sm:mt-7 md:mt-8">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">
                     {t('contact.social.title')}
                   </h3>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-3 sm:gap-4">
                     {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
                       const IconComponent = getIcon(link.icon);
                       const isGithub = link.icon === 'FaGithub';
@@ -135,16 +135,16 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`group relative p-4 w-fit text-xl font-semibold text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl border-2 ${
+                          className={`group relative p-3 sm:p-4 w-fit text-base sm:text-lg md:text-xl font-semibold text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl border-2 ${
                             isGithub 
                               ? 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 hover:shadow-purple-500/25 border-purple-500 hover:border-purple-400' 
                               : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 border-blue-500 hover:border-blue-400'
                           }`}
                           aria-label={link.label}
                         >
-                          <span className="flex items-center gap-2">
+                          <span className="flex items-center gap-1.5 sm:gap-2">
                             <IconComponent />
-                            {link.label}
+                            <span className="hidden xs:inline">{link.label}</span>
                           </span>
                           <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
                             isGithub 
@@ -170,37 +170,37 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
           bgColor="bg-gray-50 dark:bg-gray-800"
         >
           <div className="col-span-full">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">✓</span>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">✓</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {t('contact.availability.available')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   {t('contact.availability.availableDesc')}
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">✓</span>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">✓</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {t('contact.availability.quickResponse')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   {t('contact.availability.quickResponseDesc')}
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">✓</span>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">✓</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {t('contact.availability.flexible')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   {t('contact.availability.flexibleDesc')}
                 </p>
               </div>

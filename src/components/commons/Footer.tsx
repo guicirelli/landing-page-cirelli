@@ -61,28 +61,28 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
   return (
     <footer className={`bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 ${className}`}>
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto px-4 xs:px-5 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand Section */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
+          <div className="sm:col-span-2">
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <Image
                 src="/img/foto perfil.jpeg"
                 alt={businessSettings.brandName}
                 width={40}
                 height={40}
-                className="w-10 h-10 rounded-full object-cover"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover flex-shrink-0"
               />
-              <span className="font-bold text-gray-900 dark:text-white text-lg">
+              <span className="font-bold text-gray-900 dark:text-white text-base sm:text-lg">
                 {businessSettings.brandName}
               </span>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 max-w-md">
               {businessSettings.brandDescription}
             </p>
             
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex gap-2 sm:gap-3 md:gap-4">
               {linkTreeData.linkTree?.filter((link: any) => link.icon !== 'FaEnvelope').map((link: any, index: number) => {
                 const IconComponent = getIcon(link.icon);
                 return (
@@ -91,7 +91,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                    className="p-1.5 sm:p-2 bg-white dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
                     aria-label={link.label}
                   >
                     <IconComponent />
@@ -103,30 +103,30 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.quickLinks')}</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 text-sm sm:text-base">{t('footer.quickLinks')}</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/" className="text-sm sm:text-base text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                   {t('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link href="/sobre" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/sobre" className="text-sm sm:text-base text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                   {t('navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link href="/projetos" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/projetos" className="text-sm sm:text-base text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                   {t('navigation.projects')}
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/blog" className="text-sm sm:text-base text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                   {t('navigation.blog')}
                 </Link>
               </li>
               <li>
-                <Link href="/contato" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                <Link href="/contato" className="text-sm sm:text-base text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                   {t('navigation.contact')}
                 </Link>
               </li>
@@ -135,22 +135,22 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.contact')}</h3>
-            <div className="space-y-2">
-              <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 text-sm sm:text-base">{t('footer.contact')}</h3>
+            <div className="space-y-1.5 sm:space-y-2">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 <a 
                   href="https://wa.me/5543991575781" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                  className="hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 break-all"
                 >
                   {businessSettings.brandPhone}
                 </a>
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 <a 
                   href="mailto:guilopes.030206@gmail.com" 
-                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 break-all"
                 >
                   guilopes.030206@gmail.com
                 </a>
@@ -160,12 +160,12 @@ export const Footer = ({ className = "" }: FooterProps) => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
+        <div className="border-t border-gray-200 dark:border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
               {t('footer.copyright')}
             </p>
-            <p className="text-gray-500 dark:text-gray-500 text-sm">
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500">
               © {new Date().getFullYear()} {businessSettings.brandName}
             </p>
           </div>

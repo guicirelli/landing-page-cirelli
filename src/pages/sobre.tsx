@@ -35,85 +35,120 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
           <div className="col-span-full">
             <div className="prose prose-lg max-w-none mx-auto">
               {/* Education and Specialization blocks */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                    {t('about.education.title')}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-lg">
-                    {t('about.education.degree')}
-                  </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
+                <div className="group relative px-3 sm:px-4 py-4 sm:py-5 md:py-6 rounded-xl text-center font-semibold bg-white dark:bg-white hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-500 cursor-default overflow-hidden shadow-lg animate-fade-in-up"
+                  style={{
+                    animationDelay: '0ms',
+                    opacity: 0
+                  }}
+                >
+                  {/* Efeito de brilho sutil no hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:via-blue-50/30 group-hover:to-purple-50/50 transition-all duration-500 rounded-xl pointer-events-none"></div>
+                  
+                  {/* Borda sutil que aparece no hover */}
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-300 transition-all duration-500 pointer-events-none"></div>
+                  
+                  {/* Conteúdo */}
+                  <div className="relative z-10">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-900 mb-2 sm:mb-3 transform group-hover:scale-105 transition-transform duration-300">
+                      {t('about.education.title')}
+                    </h3>
+                    <p className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-900">
+                      {t('about.education.degree')}
+                    </p>
+                  </div>
+                  
+                  {/* Efeito de brilho animado no canto */}
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 rounded-full blur-2xl transition-all duration-500 pointer-events-none"></div>
                 </div>
-                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                    {t('about.specialization.title')}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-lg">
-                    {t('about.specialization.area')}
-                  </p>
+                
+                <div className="group relative px-3 sm:px-4 py-4 sm:py-5 md:py-6 rounded-xl text-center font-semibold bg-white dark:bg-white hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-500 cursor-default overflow-hidden shadow-lg animate-fade-in-up"
+                  style={{
+                    animationDelay: '50ms',
+                    opacity: 0
+                  }}
+                >
+                  {/* Efeito de brilho sutil no hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:via-blue-50/30 group-hover:to-purple-50/50 transition-all duration-500 rounded-xl pointer-events-none"></div>
+                  
+                  {/* Borda sutil que aparece no hover */}
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-300 transition-all duration-500 pointer-events-none"></div>
+                  
+                  {/* Conteúdo */}
+                  <div className="relative z-10">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-900 mb-2 sm:mb-3 transform group-hover:scale-105 transition-transform duration-300">
+                      {t('about.specialization.title')}
+                    </h3>
+                    <p className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-900">
+                      {t('about.specialization.area')}
+                    </p>
+                  </div>
+                  
+                  {/* Efeito de brilho animado no canto */}
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 rounded-full blur-2xl transition-all duration-500 pointer-events-none"></div>
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row gap-12 items-start">
-                <div className="flex-shrink-0 flex flex-row sm:flex-col gap-4 sm:gap-8 justify-center lg:justify-start">
+              <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-start">
+                <div className="flex-shrink-0 flex flex-row sm:flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center lg:justify-start w-full lg:w-auto">
                   <Image
                     src="/img/perfil2.jpeg"
                     alt="Guilherme Cirelli Lopes"
                     width={256}
                     height={256}
-                    className="w-24 h-24 sm:w-48 sm:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
+                    className="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
                   />
                   <Image
                     src="/img/perfil3.jpeg"
                     alt="Guilherme Cirelli Lopes working"
                     width={256}
                     height={256}
-                    className="w-24 h-24 sm:w-48 sm:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
+                    className="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl"
                   />
                 </div>
-                <div className="flex-1">
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                <div className="flex-1 w-full">
+                  <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                     {t('about.introduction')}
                   </p>
                   
-                  <div className="mb-8">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  <div className="mb-6 sm:mb-7 md:mb-8">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                       {t('about.services.title')}
                     </h3>
-                    <ul className="text-lg text-gray-700 dark:text-gray-300 space-y-2 mb-6 list-disc list-inside">
+                    <ul className="text-base sm:text-lg text-gray-700 dark:text-gray-300 space-y-1.5 sm:space-y-2 mb-4 sm:mb-5 md:mb-6 list-disc list-inside">
                       {t('about.services.items').map((item: string, index: number) => (
                         <li key={index}>{item}</li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-8">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  <div className="mb-6 sm:mb-7 md:mb-8">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                       {t('about.whyChoose.title')}
                     </h3>
-                    <ul className="text-lg text-gray-700 dark:text-gray-300 space-y-2 mb-6 list-disc list-inside">
+                    <ul className="text-base sm:text-lg text-gray-700 dark:text-gray-300 space-y-1.5 sm:space-y-2 mb-4 sm:mb-5 md:mb-6 list-disc list-inside">
                       {t('about.whyChoose.items').map((item: string, index: number) => (
                         <li key={index}>{item}</li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-8">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  <div className="mb-6 sm:mb-7 md:mb-8">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                       {t('about.skills.title')}
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg text-gray-700 dark:text-gray-300">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
                       <div>
-                        <h4 className="font-semibold mb-2">{t('about.skills.frontend')}</h4>
-                        <p>{t('about.skills.frontendTechs')}</p>
+                        <h4 className="font-semibold mb-1.5 sm:mb-2">{t('about.skills.frontend')}</h4>
+                        <p className="text-sm sm:text-base">{t('about.skills.frontendTechs')}</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-2">{t('about.skills.backend')}</h4>
-                        <p>{t('about.skills.backendTechs')}</p>
+                        <h4 className="font-semibold mb-1.5 sm:mb-2">{t('about.skills.backend')}</h4>
+                        <p className="text-sm sm:text-base">{t('about.skills.backendTechs')}</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-2">{t('about.skills.deploy')}</h4>
-                        <p>{t('about.skills.deployTechs')}</p>
+                        <h4 className="font-semibold mb-1.5 sm:mb-2">{t('about.skills.deploy')}</h4>
+                        <p className="text-sm sm:text-base">{t('about.skills.deployTechs')}</p>
                       </div>
                     </div>
                   </div>

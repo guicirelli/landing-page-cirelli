@@ -26,36 +26,36 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
   return (
     <div
       className={`${isVisible ? 'flex' : 'hidden'}
-      fixed inset-0 w-full h-full bg-black bg-opacity-40 backdrop-blur-sm md:hidden
+      fixed inset-0 w-full h-full bg-black bg-opacity-40 backdrop-blur-sm md:hidden z-50
     `}
       onClick={onClose}
     >
       <div
-        className="w-full bg-white dark:bg-gray-900 h-96 shadow-md py-4 px-5"
+        className="w-full max-w-sm bg-white dark:bg-gray-900 min-h-[400px] max-h-[90vh] overflow-y-auto shadow-md py-4 sm:py-5 px-4 sm:px-5"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between mb-5">
-          <Link href="/" className="flex items-center gap-3">
+        <div className="flex justify-between items-center mb-4 sm:mb-5 gap-2">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
             <Image
               src="/img/foto perfil.jpeg"
               alt="Guilherme Cirelli Lopes"
               width={40}
               height={40}
-              className="w-10 h-10 rounded-full object-cover"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover flex-shrink-0"
             />
-            <span className="font-bold text-gray-900 dark:text-white text-lg">
+            <span className="font-bold text-gray-900 dark:text-white text-base sm:text-lg truncate">
               Guilherme Cirelli
             </span>
           </Link>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <LanguageSwitcher />
             <ThemeToggle />
-            <button onClick={onClose}>
-              <MenuCloseIcon className="fill-gray-700 dark:fill-white w-8 h-8" />
+            <button onClick={onClose} aria-label="Fechar menu">
+              <MenuCloseIcon className="fill-gray-700 dark:fill-white w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
             </button>
           </div>
         </div>
-        <nav className="flex flex-col gap-5 text-xl p-5 items-center">
+        <nav className="flex flex-col gap-3 sm:gap-4 md:gap-5 text-base sm:text-lg md:text-xl px-2 sm:px-5 items-stretch sm:items-center">
           <Link
             href="/"
             onClick={onClose}

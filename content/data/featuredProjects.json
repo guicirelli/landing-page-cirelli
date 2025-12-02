@@ -3,27 +3,43 @@
   "projects": [
     {
       "id": 1,
+      "title": "Flowly",
       "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project1",
-      "techs": ["Next.js", "TypeScript", "Tailwind"],
+      "descriptionKey": "home.projects.project3",
+      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       "featured": true,
-      "link": "/projetos"
+      "link": "https://painelprodutivo.netlify.app",
+      "thumbnail": "/img/foto flowly.jpg"
     },
     {
       "id": 2,
+      "title": "Controle Financeiro Cirelli",
       "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project2",
-      "techs": ["React", "Node.js", "MongoDB"],
+      "descriptionKey": "home.projects.project1",
+      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Clerk (Autenticação)"],
       "featured": true,
-      "link": "/projetos"
+      "link": "https://financeguicirelli.netlify.app",
+      "thumbnail": "/img/foto finance.jpg"
     },
     {
       "id": 3,
+      "title": "AstroTech Solar",
       "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project3",
-      "techs": ["Next.js", "PostgreSQL", "API REST"],
+      "descriptionKey": "home.projects.project2",
+      "techs": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn UI"],
       "featured": true,
-      "link": "/projetos"
+      "link": "https://astrotechsolar.netlify.app",
+      "thumbnail": "/img/foto astrotech.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Percirelli Store",
+      "titleKey": "projects.projectNumber",
+      "descriptionKey": "home.projects.project4",
+      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Netlify (Deploy)"],
+      "featured": true,
+      "link": "https://percirelli.netlify.app",
+      "thumbnail": "/img/foto percirelli.jpg"
     }
   ]
 }

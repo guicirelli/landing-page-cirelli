@@ -65,6 +65,7 @@
       "project1": "Sistema completo com Next.js e TypeScript",
       "project2": "Aplicação web com React e Node.js",
       "project3": "API REST com PostgreSQL",
+      "project4": "Plataforma personalizada com Node.js e Express",
       "viewAll": "Ver Todos os Projetos"
     },
     "techStack": {
@@ -111,10 +112,10 @@
       "apis": "APIs REST",
       "html5": "HTML5",
       "css3": "CSS3",
-      "sql": "SQL",
+      "typescript": "TypeScript",
+      "tailwind": "Tailwind CSS",
       "github": "GitHub",
-      "netlify": "Netlify",
-      "trello": "Trello"
+      "netlify": "Netlify"
     }
   },
   "about": {

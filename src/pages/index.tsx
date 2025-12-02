@@ -1,5 +1,4 @@
 import { Inicio } from '@/components/Home/Inicio';
-import { AboutSection } from '@/components/Home/AboutSection';
 import { ServicesSection } from '@/components/Home/ServicesSection';
 import { FeaturedProjects } from '@/components/Home/FeaturedProjects';
 import { TechStack } from '@/components/Home/TechStack';
@@ -103,17 +102,14 @@ const Home = ({ home, allPostsData, businessSettings, generalSettings }: HomePro
         {/* Hero Section */}
         <Inicio />
 
-        {/* Services Section */}
-        <ServicesSection />
-
-        {/* About Section */}
-        <AboutSection />
+        {/* Tech Stack */}
+        <TechStack />
 
         {/* Featured Projects */}
         <FeaturedProjects />
 
-        {/* Tech Stack */}
-        <TechStack />
+        {/* Services Section */}
+        <ServicesSection />
 
         {/* Timeline Section */}
         <TimelineSection />

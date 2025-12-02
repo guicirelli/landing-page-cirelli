@@ -62,14 +62,14 @@ export const PageSection = ({
       )}
       <div className={`relative ${isBoxed ? `${maxWidth} mx-auto` : ""} ${hPadding}`}>
         {(title || subtitle) && (
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
             {title && (
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 sm:px-0">
                 {subtitle}
               </p>
             )}
@@ -81,11 +81,11 @@ export const PageSection = ({
         </div>
 
         {(ctaBtnText || ctaContrastBtnText) && (
-          <div className={`flex flex-wrap ${ctaPosition[ctaContrastBtnPosition]} gap-4 mt-12`}>
+          <div className={`flex flex-wrap ${ctaPosition[ctaContrastBtnPosition]} gap-3 sm:gap-4 mt-8 sm:mt-10 md:mt-12`}>
             {ctaBtnText && ctaBtnLink && (
               <a
                 href={ctaBtnLink}
-                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 {ctaBtnText}
               </a>
@@ -93,7 +93,7 @@ export const PageSection = ({
             {ctaContrastBtnText && ctaContrastBtnLink && (
               <a
                 href={ctaContrastBtnLink}
-                className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 font-semibold rounded-lg transition-colors duration-200"
+                className="inline-flex items-center px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 font-semibold rounded-lg transition-colors duration-200 text-sm sm:text-base"
               >
                 {ctaContrastBtnText}
               </a>

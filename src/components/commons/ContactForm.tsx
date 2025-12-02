@@ -133,22 +133,22 @@ export const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
         <div className="text-center">
-          <div className="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
             {t('contact.success.title') || 'Mensagem Enviada!'}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-5 md:mb-6">
             {t('contact.success.message') || 'Obrigado pelo seu contato! Responderei em breve.'}
           </p>
           <button
             onClick={() => setIsSubmitted(false)}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 sm:py-2.5 px-4 sm:px-5 md:px-6 rounded-lg transition-colors duration-200 text-sm sm:text-base"
           >
             {t('contact.success.sendAnother') || 'Enviar Outra Mensagem'}
           </button>
@@ -158,8 +158,8 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+    <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-5 md:mb-6">
         {t('contact.sendMessage')}
       </h3>
       <form 
@@ -167,14 +167,14 @@ export const ContactForm = () => {
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit} 
-        className="space-y-6"
+        className="space-y-4 sm:space-y-5 md:space-y-6"
       >
         {/* Campo oculto para Netlify identificar o formulário */}
         <input type="hidden" name="form-name" value="contato" />
 
         {/* Campo Nome */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 sm:mb-2">
             {t('contact.name')} <span className="text-red-500">*</span>
           </label>
           <input
@@ -183,20 +183,20 @@ export const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 ${
+            className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 text-sm sm:text-base ${
               errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder={t('contact.namePlaceholder')}
             required
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+            <p className="mt-1 text-xs sm:text-sm text-red-500">{errors.name}</p>
           )}
         </div>
 
         {/* Campo E-mail */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 sm:mb-2">
             {t('contact.email')} <span className="text-red-500">*</span>
           </label>
           <input
@@ -205,20 +205,20 @@ export const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 ${
+            className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 text-sm sm:text-base ${
               errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder={t('contact.emailPlaceholder')}
             required
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+            <p className="mt-1 text-xs sm:text-sm text-red-500">{errors.email}</p>
           )}
         </div>
 
         {/* Campo Mensagem */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5 sm:mb-2">
             {t('contact.message')} <span className="text-red-500">*</span>
           </label>
           <textarea
@@ -227,14 +227,14 @@ export const ContactForm = () => {
             value={formData.message}
             onChange={handleInputChange}
             rows={5}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 ${
+            className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 text-sm sm:text-base resize-y ${
               errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder={t('contact.messagePlaceholder')}
             required
           />
           {errors.message && (
-            <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+            <p className="mt-1 text-xs sm:text-sm text-red-500">{errors.message}</p>
           )}
         </div>
 
@@ -242,7 +242,7 @@ export const ContactForm = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed"
+          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-5 md:px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed text-sm sm:text-base"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">

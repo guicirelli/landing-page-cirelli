@@ -42,9 +42,14 @@
       "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-500 text-gray-900 dark:text-white"
     },
     {
-      "id": "sql",
-      "nameKey": "home.technologies.sql",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-indigo-600 text-gray-900 dark:text-white"
+      "id": "typescript",
+      "nameKey": "home.technologies.typescript",
+      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-600 text-gray-900 dark:text-white"
+    },
+    {
+      "id": "tailwind",
+      "nameKey": "home.technologies.tailwind",
+      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-cyan-500 text-gray-900 dark:text-white"
     },
     {
       "id": "github",
@@ -55,11 +60,6 @@
       "id": "netlify",
       "nameKey": "home.technologies.netlify",
       "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-teal-500 text-gray-900 dark:text-white"
-    },
-    {
-      "id": "trello",
-      "nameKey": "home.technologies.trello",
-      "color": "bg-white/10 dark:bg-gray-900/10 border-l-4 border-blue-600 text-gray-900 dark:text-white"
     }
   ]
 }

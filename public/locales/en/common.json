@@ -171,9 +171,76 @@
     "projectNumber": "Project",
     "featuredBadge": "FEATURED",
     "videoPlaceholder": "Video",
+    "fullscreen": {
+      "open": "Full Screen",
+      "close": "Close Full Screen"
+    },
+    "detail": {
+      "flowly": {
+        "features": [
+          "Smart task organization",
+          "Automatic prioritization with AI",
+          "Productivity dashboard",
+          "Real-time reports and metrics"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion"
+        ]
+      },
+      "dashboardFinance": {
+        "features": [
+          "Secure login with Clerk",
+          "Complete financial dashboard",
+          "Income and expense control",
+          "Intuitive charts and visual analysis",
+          "Detailed reports by category",
+          "Modern and easy-to-use interface"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Clerk (Authentication)"
+        ]
+      },
+      "astrotech": {
+        "features": [
+          "Complete institutional website for a solar energy company",
+          "Interactive photovoltaic calculator",
+          "Services, portfolio, and testimonials sections",
+          "Smooth navigation and fully responsive layout"
+        ],
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Shadcn UI"
+        ]
+      },
+      "percirelli": {
+        "features": [
+          "Dynamic product catalog",
+          "Sales page with highlighted categories",
+          "Modern, responsive layout",
+          "Fast and optimized navigation"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Netlify (Deploy)"
+        ]
+      }
+    },
     "like": {
       "loginRequired": "Sign in to like!",
-      "loginMessage": "Log into your account to save your favorite projects"
+      "loginMessage": "Log into your account to save your favorite projects",
+      "likeAction": "Like",
+      "unlikeAction": "Unlike"
     },
     "interested": {
       "title": "Interested in Working Together?",
@@ -268,6 +335,13 @@
       "title": "What they say about my work",
       "placeholder": "Client testimonials coming soon..."
     }
+  },
+  "notFound": {
+    "pageTitle": "404 | Guilherme Cirelli",
+    "heading": "404",
+    "message1": "Oops, we can't find this page!",
+    "message2": "Click the button below to return to the home page.",
+    "cta": "Go to Home Page"
   },
   "blog": {
     "title": "Timeline",

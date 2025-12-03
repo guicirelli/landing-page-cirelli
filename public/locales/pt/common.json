@@ -171,9 +171,76 @@
     "projectNumber": "Projeto",
     "featuredBadge": "DESTAQUE",
     "videoPlaceholder": "Vídeo",
+    "fullscreen": {
+      "open": "Tela Cheia",
+      "close": "Fechar Tela Cheia"
+    },
+    "detail": {
+      "flowly": {
+        "features": [
+          "Organização inteligente de tarefas",
+          "Priorização automática com IA",
+          "Dashboard de produtividade",
+          "Relatórios e métricas em tempo real"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion"
+        ]
+      },
+      "dashboardFinance": {
+        "features": [
+          "Login seguro com Clerk",
+          "Dashboard financeiro completo",
+          "Controle de receitas e despesas",
+          "Gráficos intuitivos e análise visual",
+          "Relatórios detalhados por categoria",
+          "Interface moderna e fácil de usar"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Clerk (Autenticação)"
+        ]
+      },
+      "astrotech": {
+        "features": [
+          "Site institucional completo para empresa de energia solar",
+          "Calculadora fotovoltaica interativa",
+          "Sessões de serviços, portfólio e depoimentos",
+          "Navegação suave e layout totalmente responsivo"
+        ],
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Shadcn UI"
+        ]
+      },
+      "percirelli": {
+        "features": [
+          "Catálogo dinâmico de produtos",
+          "Página de venda com destaque por categorias",
+          "Layout responsivo e moderno",
+          "Navegação rápida e otimizada"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Netlify (Deploy)"
+        ]
+      }
+    },
     "like": {
       "loginRequired": "Faça login para curtir!",
-      "loginMessage": "Entre na sua conta para salvar seus projetos favoritos"
+      "loginMessage": "Entre na sua conta para salvar seus projetos favoritos",
+      "likeAction": "Curtir",
+      "unlikeAction": "Descurtir"
     },
     "interested": {
       "title": "Interessado em trabalhar juntos?",
@@ -268,6 +335,13 @@
       "title": "O que dizem sobre meu trabalho",
       "placeholder": "Depoimentos de clientes em breve..."
     }
+  },
+  "notFound": {
+    "pageTitle": "404 | Guilherme Cirelli",
+    "heading": "404",
+    "message1": "Oops, não conseguimos encontrar esta página!",
+    "message2": "Clique no botão abaixo para retornar à página inicial.",
+    "cta": "Ir para a Página Inicial"
   },
   "blog": {
     "title": "Linha do Tempo",

@@ -12,18 +12,22 @@ interface SobreProps {
 }
 
 const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const metaTitle = `${t('navigation.about')} | ${businessSettings.brandName}`;
+  const metaDescription = language === 'pt'
+    ? `Conheça mais sobre ${businessSettings.brandName} - ${businessSettings.brandDescription}`
+    : `Learn more about ${businessSettings.brandName} - ${businessSettings.brandDescription}`;
   
   return (
     <>
       <Head>
-        <title>About | {businessSettings.brandName}</title>
+        <title>{metaTitle}</title>
         <meta
           name="description"
-          content={`Learn more about ${businessSettings.brandName} - ${businessSettings.brandDescription}`}
+          content={metaDescription}
         />
-        <meta property="og:title" content={`About | ${businessSettings.brandName}`} />
-        <meta property="og:description" content={`Learn more about ${businessSettings.brandName} - ${businessSettings.brandDescription}`} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
       </Head>
 
       <div className="min-h-screen">
@@ -36,24 +40,22 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
             <div className="prose prose-lg max-w-none mx-auto">
               {/* Education and Specialization blocks */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
-                <div className="group relative px-3 sm:px-4 py-4 sm:py-5 md:py-6 rounded-xl text-center font-semibold bg-white dark:bg-white hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-500 cursor-default overflow-hidden shadow-lg animate-fade-in-up"
+                <div className="group relative px-3 sm:px-4 py-4 sm:py-5 md:py-6 rounded-xl text-center font-semibold bg-white dark:bg-blue-950 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-500 cursor-default overflow-hidden shadow-lg animate-fade-in-up"
                   style={{
                     animationDelay: '0ms',
                     opacity: 0
                   }}
                 >
-                  {/* Efeito de brilho sutil no hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:via-blue-50/30 group-hover:to-purple-50/50 transition-all duration-500 rounded-xl pointer-events-none"></div>
                   
                   {/* Borda sutil que aparece no hover */}
-                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-300 transition-all duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-slate-700 transition-all duration-500 pointer-events-none"></div>
                   
                   {/* Conteúdo */}
                   <div className="relative z-10">
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-900 mb-2 sm:mb-3 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 transform group-hover:scale-105 transition-transform duration-300">
                       {t('about.education.title')}
                     </h3>
-                    <p className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-900">
+                    <p className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-200">
                       {t('about.education.degree')}
                     </p>
                   </div>
@@ -62,24 +64,22 @@ const Sobre = ({ businessSettings, generalSettings }: SobreProps) => {
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 rounded-full blur-2xl transition-all duration-500 pointer-events-none"></div>
                 </div>
                 
-                <div className="group relative px-3 sm:px-4 py-4 sm:py-5 md:py-6 rounded-xl text-center font-semibold bg-white dark:bg-white hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-500 cursor-default overflow-hidden shadow-lg animate-fade-in-up"
+                <div className="group relative px-3 sm:px-4 py-4 sm:py-5 md:py-6 rounded-xl text-center font-semibold bg-white dark:bg-blue-950 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 transition-all duration-500 cursor-default overflow-hidden shadow-lg animate-fade-in-up"
                   style={{
                     animationDelay: '50ms',
                     opacity: 0
                   }}
                 >
-                  {/* Efeito de brilho sutil no hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 via-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:via-blue-50/30 group-hover:to-purple-50/50 transition-all duration-500 rounded-xl pointer-events-none"></div>
                   
                   {/* Borda sutil que aparece no hover */}
-                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-300 transition-all duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-slate-700 transition-all duration-500 pointer-events-none"></div>
                   
                   {/* Conteúdo */}
                   <div className="relative z-10">
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-900 mb-2 sm:mb-3 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 transform group-hover:scale-105 transition-transform duration-300">
                       {t('about.specialization.title')}
                     </h3>
-                    <p className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-900">
+                    <p className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-200">
                       {t('about.specialization.area')}
                     </p>
                   </div>

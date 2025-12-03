@@ -50,7 +50,7 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <LanguageSwitcher />
             <ThemeToggle />
-            <button onClick={onClose} aria-label="Fechar menu">
+            <button onClick={onClose} aria-label={t('floatingButton.closeMenu')}>
               <MenuCloseIcon className="fill-gray-700 dark:fill-white w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
             </button>
           </div>

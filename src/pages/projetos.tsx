@@ -36,7 +36,7 @@ const PROJECT_CONFIGS: ProjetoConfig[] = [
     slug: "flowly",
     title: "Flowly",
     videoUrl: "https://www.loom.com/embed/0fbc80129201406ba932793bd91ce3d9?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
-    link: "https://painelprodutivo.netlify.app",
+        link: "https://flowlypainel.netlify.app",
     featuresKey: "projects.detail.flowly.features",
     technologiesKey: "projects.detail.flowly.technologies",
     featured: true,

@@ -66,6 +66,7 @@
       "project2": "Aplicação web com React e Node.js",
       "project3": "API REST com PostgreSQL",
       "project4": "Plataforma personalizada com Node.js e Express",
+      "project5": "Aplicativo fitness com painel interativo para academias",
       "viewAll": "Ver Todos os Projetos"
     },
     "techStack": {
@@ -233,6 +234,21 @@
           "TypeScript",
           "Tailwind CSS",
           "Netlify (Deploy)"
+        ]
+      },
+      "gymcirelli": {
+        "features": [
+          "Gerenciamento completo de treinos e planos personalizados",
+          "Dashboard para acompanhar métricas de desempenho dos alunos",
+          "Agenda de aulas integrada com notificações",
+          "Interface responsiva otimizada para dispositivos móveis"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Netlify"
         ]
       }
     },

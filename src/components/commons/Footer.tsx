@@ -138,22 +138,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 text-sm sm:text-base">{t('footer.contact')}</h3>
             <div className="space-y-1.5 sm:space-y-2">
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                <a 
-                  href="https://wa.me/5543991575781" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 break-all"
-                >
-                  {businessSettings.brandPhone}
-                </a>
-              </p>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                <a 
-                  href="mailto:guilopes.030206@gmail.com" 
-                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 break-all"
-                >
-                  guilopes.030206@gmail.com
-                </a>
+                {t('footer.contactAvailable')}
               </p>
             </div>
           </div>

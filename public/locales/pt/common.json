@@ -276,7 +276,8 @@
     "locationText": "Londrina, PR - Brasil",
     "connect": {
       "title": "Conecte-se Comigo",
-      "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!"
+      "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!",
+      "contactInfo": "Informações de contato disponíveis após contrato via Upwork."
     },
     "social": {
       "title": "Redes Sociais"
@@ -316,6 +317,7 @@
   "footer": {
     "quickLinks": "Links Rápidos",
     "contact": "Contato",
+    "contactAvailable": "Contato disponível após contrato via Upwork.",
     "copyright": "© 2025 Guilherme Cirelli Lopes. Todos os direitos reservados. Construído com Next.js e muito ☕."
   },
   "auth": {

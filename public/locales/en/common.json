@@ -276,7 +276,8 @@
     "locationText": "Londrina, PR - Brazil",
     "connect": {
       "title": "Connect with Me",
-      "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!"
+      "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!",
+      "contactInfo": "Contact information available after contract via Upwork."
     },
     "social": {
       "title": "Social Media"
@@ -316,6 +317,7 @@
   "footer": {
     "quickLinks": "Quick Links",
     "contact": "Contact",
+    "contactAvailable": "Contact available after contract via Upwork.",
     "copyright": "© 2025 Guilherme Cirelli Lopes. All rights reserved. Built with Next.js and lots of ☕."
   },
   "auth": {

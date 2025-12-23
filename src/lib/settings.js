@@ -99,11 +99,6 @@ const linkTreeData = {
       "href": "https://www.upwork.com/freelancers/guicirelli?mp_source=share",
       "label": "Upwork",
       "icon": "FaUpwork"
-    },
-    {
-      "href": "mailto:guilopes.030206@gmail.com",
-      "label": "Email",
-      "icon": "FaEnvelope"
     }
   ]
 };

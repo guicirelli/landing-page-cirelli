@@ -66,7 +66,6 @@
       "project2": "Web application with React and Node.js",
       "project3": "REST API with PostgreSQL",
       "project4": "Custom platform with Node.js and Express",
-      "project5": "Fitness app with an interactive gym dashboard",
       "viewAll": "View All Projects"
     },
     "techStack": {
@@ -235,21 +234,6 @@
           "Tailwind CSS",
           "Netlify (Deploy)"
         ]
-      },
-      "gymcirelli": {
-        "features": [
-          "Complete management for custom workout plans",
-          "Dashboard to track student performance metrics",
-          "Integrated class schedule with reminders",
-          "Responsive interface optimized for mobile devices"
-        ],
-        "technologies": [
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS",
-          "Framer Motion",
-          "Netlify"
-        ]
       }
     },
     "like": {
@@ -276,8 +260,7 @@
     "locationText": "Londrina, PR - Brazil",
     "connect": {
       "title": "Connect with Me",
-      "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!",
-      "contactInfo": "Contact information available after contract via Upwork."
+      "description": "I'm always interested in new projects and opportunities. If you have an idea or need a developer for your team, don't hesitate to get in touch!"
     },
     "social": {
       "title": "Social Media"
@@ -317,7 +300,6 @@
   "footer": {
     "quickLinks": "Quick Links",
     "contact": "Contact",
-    "contactAvailable": "Contact available after contract via Upwork.",
     "copyright": "© 2025 Guilherme Cirelli Lopes. All rights reserved. Built with Next.js and lots of ☕."
   },
   "auth": {

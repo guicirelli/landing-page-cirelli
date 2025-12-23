@@ -96,14 +96,9 @@ const mainMenu = {
 const linkTreeData = {
   "linkTree": [
     {
-      "href": "https://www.linkedin.com/in/guicirelli/",
-      "label": "LinkedIn",
-      "icon": "FaLinkedin"
-    },
-    {
-      "href": "https://github.com/guicirelli",
-      "label": "GitHub",
-      "icon": "FaGithub"
+      "href": "https://www.upwork.com/freelancers/guicirelli?mp_source=share",
+      "label": "Upwork",
+      "icon": "FaUpwork"
     },
     {
       "href": "mailto:guilopes.030206@gmail.com",

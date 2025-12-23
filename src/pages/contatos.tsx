@@ -135,12 +135,8 @@ const Contatos = ({ contacts }: ContatosProps) => {
 const loadContacts = async () => {
   return [
     {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/guicirelli/",
-    },
-    {
-      name: "GitHub",
-      link: "https://github.com/guicirelli",
+      name: "Upwork",
+      link: "https://www.upwork.com/freelancers/guicirelli?mp_source=share",
     },
   ];
 };

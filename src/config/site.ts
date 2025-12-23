@@ -4,8 +4,7 @@ export const siteConfig = {
   url: "https://www.guilhermecirelli.com.br",
   ogImage: "/img/og-image.jpg",
   links: {
-    github: "https://github.com/seu-github",
-    linkedin: "https://linkedin.com/in/seu-linkedin"
+    upwork: "https://www.upwork.com/freelancers/guicirelli?mp_source=share"
   },
   keywords: [
     "desenvolvedor full stack",
@@ -21,14 +20,9 @@ export const siteConfig = {
   themeColor: "#0f172a",
   socialLinks: [
     {
-      name: "GitHub",
-      url: "https://github.com/seu-github",
-      icon: "github"
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/seu-linkedin",
-      icon: "linkedin"
+      name: "Upwork",
+      url: "https://www.upwork.com/freelancers/guicirelli?mp_source=share",
+      icon: "upwork"
     }
   ],
   technologies: [

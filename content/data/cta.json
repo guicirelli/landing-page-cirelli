@@ -2,7 +2,19 @@
   "cta": {
     "titleEmoji": "",
     "link": "/contato",
-    "contacts": []
+    "contacts": [
+      {
+        "type": "email",
+        "icon": "email",
+        "translationKey": "contact.email"
+      },
+      {
+        "type": "whatsapp",
+        "url": "https://wa.me/5543991575781",
+        "icon": "whatsapp",
+        "label": "WhatsApp"
+      }
+    ]
   }
 }
 

@@ -66,7 +66,6 @@
       "project2": "Aplicação web com React e Node.js",
       "project3": "API REST com PostgreSQL",
       "project4": "Plataforma personalizada com Node.js e Express",
-      "project5": "Aplicativo fitness com painel interativo para academias",
       "viewAll": "Ver Todos os Projetos"
     },
     "techStack": {
@@ -235,21 +234,6 @@
           "Tailwind CSS",
           "Netlify (Deploy)"
         ]
-      },
-      "gymcirelli": {
-        "features": [
-          "Gerenciamento completo de treinos e planos personalizados",
-          "Dashboard para acompanhar métricas de desempenho dos alunos",
-          "Agenda de aulas integrada com notificações",
-          "Interface responsiva otimizada para dispositivos móveis"
-        ],
-        "technologies": [
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS",
-          "Framer Motion",
-          "Netlify"
-        ]
       }
     },
     "like": {
@@ -276,8 +260,7 @@
     "locationText": "Londrina, PR - Brasil",
     "connect": {
       "title": "Conecte-se Comigo",
-      "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!",
-      "contactInfo": "Informações de contato disponíveis após contrato via Upwork."
+      "description": "Estou sempre interessado em novos projetos e oportunidades. Se você tem uma ideia ou precisa de um desenvolvedor para sua equipe, não hesite em entrar em contato!"
     },
     "social": {
       "title": "Redes Sociais"
@@ -317,7 +300,6 @@
   "footer": {
     "quickLinks": "Links Rápidos",
     "contact": "Contato",
-    "contactAvailable": "Contato disponível após contrato via Upwork.",
     "copyright": "© 2025 Guilherme Cirelli Lopes. Todos os direitos reservados. Construído com Next.js e muito ☕."
   },
   "auth": {

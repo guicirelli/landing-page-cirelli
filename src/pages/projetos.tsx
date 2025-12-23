@@ -23,11 +23,9 @@ interface Projeto {
   tecnologias: string[];
   featured: boolean;
   thumbnail?: string;
-  video?: string;
 }
 
 interface ProjetoConfig extends Omit<Projeto, 'funcionalidades' | 'tecnologias'> {
-  video?: string;
   featuresKey: string;
   technologiesKey: string;
 }
@@ -35,63 +33,47 @@ interface ProjetoConfig extends Omit<Projeto, 'funcionalidades' | 'tecnologias'>
 const PROJECT_CONFIGS: ProjetoConfig[] = [
   {
     id: 1,
-    slug: "gymcirelli",
-    title: "GymCirelli",
-    videoUrl: "https://youtu.be/e2uZdqkvkjo",
-    link: "https://gymcirelli.netlify.app",
-    featuresKey: "projects.detail.gymcirelli.features",
-    technologiesKey: "projects.detail.gymcirelli.technologies",
+    slug: "flowly",
+    title: "Flowly",
+    videoUrl: "https://www.loom.com/embed/0fbc80129201406ba932793bd91ce3d9?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
+        link: "https://flowlypainel.netlify.app",
+    featuresKey: "projects.detail.flowly.features",
+    technologiesKey: "projects.detail.flowly.technologies",
     featured: true,
-    video: "https://youtu.be/e2uZdqkvkjo",
-    thumbnail: "/img/Capa Gymcirelli.jpg"
+    thumbnail: "/img/foto flowly.jpg"
   },
   {
     id: 2,
     slug: "dashboard-finance",
     title: "Dashboard Finance",
-    videoUrl: "https://youtu.be/-j4lTFwXuV4",
+    videoUrl: "https://www.loom.com/embed/278249263aa340a8be79175a57394a84?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
     link: "https://financeguicirelli.netlify.app",
     featuresKey: "projects.detail.dashboardFinance.features",
     technologiesKey: "projects.detail.dashboardFinance.technologies",
     featured: true,
-    video: "https://youtu.be/-j4lTFwXuV4",
     thumbnail: "/img/foto finance.jpg"
   },
   {
     id: 3,
-    slug: "percirelli-store",
-    title: "Percirelli Store",
-    videoUrl: "https://youtu.be/VLmlayFToJU",
-    link: "https://percirelli.netlify.app",
-    featuresKey: "projects.detail.percirelli.features",
-    technologiesKey: "projects.detail.percirelli.technologies",
-    featured: false,
-    video: "https://youtu.be/VLmlayFToJU",
-    thumbnail: "/img/foto percirelli.jpg"
-  },
-  {
-    id: 4,
-    slug: "flowly",
-    title: "Flowly",
-    videoUrl: "https://youtu.be/FQJ8rQ-12QI",
-    link: "https://flowlypainel.netlify.app",
-    featuresKey: "projects.detail.flowly.features",
-    technologiesKey: "projects.detail.flowly.technologies",
-    featured: false,
-    video: "https://youtu.be/FQJ8rQ-12QI",
-    thumbnail: "/img/foto flowly.jpg"
-  },
-  {
-    id: 5,
     slug: "astrotech-solar",
     title: "AstroTech Solar",
-    videoUrl: "https://youtu.be/S5iUl3sFbag",
+    videoUrl: "https://www.loom.com/embed/83fc245bc8f54a09ad077c21cf1a0cc1?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
     link: "https://astrotechsolar.netlify.app",
     featuresKey: "projects.detail.astrotech.features",
     technologiesKey: "projects.detail.astrotech.technologies",
-    featured: false,
-    video: "https://youtu.be/S5iUl3sFbag",
+    featured: true,
     thumbnail: "/img/foto astrotech.jpg"
+  },
+  {
+    id: 4,
+    slug: "percirelli-store",
+    title: "Percirelli Store",
+    videoUrl: "https://www.loom.com/embed/a0411ff38e1b414a8f6407def6f63fb6?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
+    link: "https://percirelli.netlify.app",
+    featuresKey: "projects.detail.percirelli.features",
+    technologiesKey: "projects.detail.percirelli.technologies",
+    featured: true,
+    thumbnail: "/img/foto percirelli.jpg"
   }
 ];
 
@@ -493,7 +475,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                         </>
                       ) : (
                         <iframe
-                          src={projetoSelecionado.video ? projetoSelecionado.video.replace("youtu.be/", "www.youtube.com/embed/") : projetoSelecionado.videoUrl}
+                          src={projetoSelecionado.videoUrl}
                           title={projetoSelecionado.title}
                           className="w-full h-full"
                           allowFullScreen

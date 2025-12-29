@@ -3,47 +3,14 @@
   "projects": [
     {
       "id": 1,
-      "slug": "flowly",
-      "title": "Flowly",
+      "slug": "codervex",
+      "title": "Codervex",
       "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project3",
-      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "descriptionKey": "home.projects.project5",
+      "techs": ["Next.js", "TypeScript", "React", "Tailwind CSS"],
       "featured": true,
-      "link": "/projetos?project=flowly",
-      "thumbnail": "/img/foto flowly.jpg"
-    },
-    {
-      "id": 2,
-      "slug": "dashboard-finance",
-      "title": "Dashboard Finance",
-      "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project1",
-      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Clerk (Autenticação)"],
-      "featured": true,
-      "link": "/projetos?project=dashboard-finance",
-      "thumbnail": "/img/foto finance.jpg"
-    },
-    {
-      "id": 3,
-      "slug": "astrotech-solar",
-      "title": "AstroTech Solar",
-      "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project2",
-      "techs": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-      "featured": true,
-      "link": "/projetos?project=astrotech-solar",
-      "thumbnail": "/img/foto astrotech.jpg"
-    },
-    {
-      "id": 4,
-      "slug": "percirelli-store",
-      "title": "Percirelli Store",
-      "titleKey": "projects.projectNumber",
-      "descriptionKey": "home.projects.project4",
-      "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Netlify (Deploy)"],
-      "featured": true,
-      "link": "/projetos?project=percirelli-store",
-      "thumbnail": "/img/foto percirelli.jpg"
+      "link": "/projetos?project=codervex",
+      "thumbnail": "/img/Capa codervex.jpg"
     }
   ]
 }

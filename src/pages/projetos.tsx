@@ -33,47 +33,69 @@ interface ProjetoConfig extends Omit<Projeto, 'funcionalidades' | 'tecnologias'>
 const PROJECT_CONFIGS: ProjetoConfig[] = [
   {
     id: 1,
-    slug: "flowly",
-    title: "Flowly",
-    videoUrl: "https://www.loom.com/embed/0fbc80129201406ba932793bd91ce3d9?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
-        link: "https://flowlypainel.netlify.app",
-    featuresKey: "projects.detail.flowly.features",
-    technologiesKey: "projects.detail.flowly.technologies",
+    slug: "codervex",
+    title: "Codervex",
+    videoUrl: "https://www.youtube.com/embed/PprX7PSDkyw",
+    link: "https://codervex.netlify.app/",
+    featuresKey: "projects.detail.codervex.features",
+    technologiesKey: "projects.detail.codervex.technologies",
     featured: true,
-    thumbnail: "/img/foto flowly.jpg"
+    thumbnail: "/img/Capa codervex.jpg"
   },
   {
     id: 2,
+    slug: "gymcirelli",
+    title: "GymCirelli",
+    videoUrl: "https://www.youtube.com/embed/e2uZdqkvkjo",
+    link: "https://gymcirelli.netlify.app/",
+    featuresKey: "projects.detail.gymcirelli.features",
+    technologiesKey: "projects.detail.gymcirelli.technologies",
+    featured: false,
+    thumbnail: "/img/capa gymcirelli.jpg"
+  },
+  {
+    id: 3,
+    slug: "percirelli-store",
+    title: "Percirelli Store",
+    videoUrl: "https://www.loom.com/embed/a0411ff38e1b414a8f6407def6f63fb6?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
+    link: "https://percirelli.netlify.app/",
+    featuresKey: "projects.detail.percirelli.features",
+    technologiesKey: "projects.detail.percirelli.technologies",
+    featured: false,
+    thumbnail: "/img/capa percirelli.jpg"
+  },
+  {
+    id: 4,
     slug: "dashboard-finance",
     title: "Dashboard Finance",
     videoUrl: "https://www.loom.com/embed/278249263aa340a8be79175a57394a84?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
     link: "https://financeguicirelli.netlify.app",
     featuresKey: "projects.detail.dashboardFinance.features",
     technologiesKey: "projects.detail.dashboardFinance.technologies",
-    featured: true,
-    thumbnail: "/img/foto finance.jpg"
+    featured: false,
+    thumbnail: "/img/capa finance.jpg"
   },
   {
-    id: 3,
+    id: 5,
+    slug: "flowly",
+    title: "Flowly",
+    videoUrl: "https://www.loom.com/embed/0fbc80129201406ba932793bd91ce3d9?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
+        link: "https://flowlypainel.netlify.app",
+    featuresKey: "projects.detail.flowly.features",
+    technologiesKey: "projects.detail.flowly.technologies",
+    featured: false,
+    thumbnail: "/img/capa flowly.jpg"
+  },
+  {
+    id: 6,
     slug: "astrotech-solar",
     title: "AstroTech Solar",
     videoUrl: "https://www.loom.com/embed/83fc245bc8f54a09ad077c21cf1a0cc1?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
     link: "https://astrotechsolar.netlify.app",
     featuresKey: "projects.detail.astrotech.features",
     technologiesKey: "projects.detail.astrotech.technologies",
-    featured: true,
+    featured: false,
     thumbnail: "/img/foto astrotech.jpg"
-  },
-  {
-    id: 4,
-    slug: "percirelli-store",
-    title: "Percirelli Store",
-    videoUrl: "https://www.loom.com/embed/a0411ff38e1b414a8f6407def6f63fb6?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
-    link: "https://percirelli.netlify.app",
-    featuresKey: "projects.detail.percirelli.features",
-    technologiesKey: "projects.detail.percirelli.technologies",
-    featured: true,
-    thumbnail: "/img/foto percirelli.jpg"
   }
 ];
 
@@ -96,6 +118,14 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
       }),
     [t]
   );
+
+  // Função para filtrar apenas as tecnologias principais
+  const getMainTechnologies = (technologies: string[]): string[] => {
+    const mainTechs = ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'];
+    return technologies.filter(tech => 
+      mainTechs.some(mainTech => tech.toLowerCase().includes(mainTech.toLowerCase()))
+    );
+  };
 
   const [projetoSelecionado, setProjetoSelecionado] = useState<Projeto>(projetos[0]);
   const [likes, setLikes] = useState<Record<number, boolean>>({});
@@ -397,7 +427,7 @@ const Projetos = ({ businessSettings, generalSettings }: ProjetosProps) => {
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-1.5">
-                        {projeto.tecnologias.map((tech, index) => (
+                        {getMainTechnologies(projeto.tecnologias).map((tech, index) => (
                           <span
                             key={index}
                             className={`text-xs px-2 py-0.5 rounded ${

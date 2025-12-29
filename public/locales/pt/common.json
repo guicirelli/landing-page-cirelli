@@ -66,6 +66,7 @@
       "project2": "Aplicação web com React e Node.js",
       "project3": "API REST com PostgreSQL",
       "project4": "Plataforma personalizada com Node.js e Express",
+      "project5": "SaaS de análise de projetos com geração de superprompts de IA",
       "viewAll": "Ver Todos os Projetos"
     },
     "techStack": {
@@ -233,6 +234,39 @@
           "TypeScript",
           "Tailwind CSS",
           "Netlify (Deploy)"
+        ]
+      },
+      "codervex": {
+        "features": [
+          "Análise de projetos web (GitHub ou ZIP)",
+          "Geração de superprompts de IA com contexto estruturado",
+          "Detecção automática de stack e classificação por tipo",
+          "Dashboard completo com histórico e autenticação"
+        ],
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Prisma ORM + PostgreSQL",
+          "Clerk (Autenticação)",
+          "Radix UI + ShadCN",
+          "Framer Motion",
+          "Netlify (Deploy)"
+        ]
+      },
+      "gymcirelli": {
+        "features": [
+          "Guia completo de treinamento de força",
+          "Biblioteca de exercícios por grupo muscular",
+          "Calculadora de IMC integrada",
+          "Blog com conteúdo científico e prático"
+        ],
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
         ]
       }
     },
